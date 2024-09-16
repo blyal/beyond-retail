@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { NAV_LINKS } from "@/constants/links";
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -37,7 +38,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <div className="flex items-center">
-            <a href="/">
+            <a href="#home">
               <Image
                 src="/logo.png"
                 alt="Logo"
@@ -62,32 +63,17 @@ const Header = () => {
           </div>
 
           <nav className="hidden md:flex space-x-6 bg-[#00070D] py-2 px-4 rounded-lg">
-            <a href="/about" className="transition-all duration-500 relative">
-              <span className="bg-gradient-to-b from-[#e4f2a6] to-[#43c2e8] bg-clip-text text-transparent transition-all duration-500 hover:text-[#43c2e8]">
-                About
-              </span>
-            </a>
-            <a
-              href="/services"
-              className="transition-all duration-500 relative"
-            >
-              <span className="bg-gradient-to-b from-[#e4f2a6] to-[#43c2e8] bg-clip-text text-transparent transition-all duration-500 hover:text-[#43c2e8]">
-                Services
-              </span>
-            </a>
-            <a
-              href="/portfolio"
-              className="transition-all duration-500 relative"
-            >
-              <span className="bg-gradient-to-b from-[#e4f2a6] to-[#43c2e8] bg-clip-text text-transparent transition-all duration-500 hover:text-[#43c2e8]">
-                Portfolio
-              </span>
-            </a>
-            <a href="/contact" className="transition-all duration-500 relative">
-              <span className="bg-gradient-to-b from-[#e4f2a6] to-[#43c2e8] bg-clip-text text-transparent transition-all duration-500 hover:text-[#43c2e8]">
-                Contact
-              </span>
-            </a>
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="transition-all duration-500 relative"
+              >
+                <span className="bg-gradient-to-b from-[#e4f2a6] to-[#43c2e8] bg-clip-text text-transparent transition-all duration-500 hover:text-[#43c2e8]">
+                  {link.name}
+                </span>
+              </a>
+            ))}
           </nav>
 
           {/* Mobile Burger Menu */}
