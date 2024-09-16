@@ -1,4 +1,4 @@
-import Services from "./Services";
+import AOSServices from "./AOSServices";
 
 const ServicesSection = () => {
   return (
@@ -23,8 +23,7 @@ const ServicesSection = () => {
           End-to-end development services, from ideation to deployment.
         </p>
 
-        <Services />
-
+        <AOSServices />
         <div className="mt-20">
           <a
             href="/contact"

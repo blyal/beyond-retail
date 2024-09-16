@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AOSPicture from "./AOSPicture";
 
 const AboutSection = () => {
   return (
@@ -8,15 +8,8 @@ const AboutSection = () => {
     >
       <div className="container mx-auto flex flex-col md:flex-row items-center md:items-center">
         {/* Photo on the Left */}
-        <div className="md:w-2/5 flex justify-center mb-8 md:mb-0 md:mr-12">
-          <Image
-            src="/mw-filter.jpg"
-            alt="Alex Blyth profile picture"
-            width={600}
-            height={600}
-            className="rounded-full object-cover"
-          />
-        </div>
+
+        <AOSPicture />
 
         <div className="md:w-3/5 text-center md:text-left">
           <h1 className="text-5xl font-bold text-gray-900 mb-8">Alex Blyth</h1>

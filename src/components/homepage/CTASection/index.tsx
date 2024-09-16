@@ -1,8 +1,21 @@
+"use client";
+
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const CTASection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
     <section
       className="min-h-screen py-16 bg-center bg-cover bg-no-repeat text-center relative flex flex-col justify-between items-center px-4 md:px-0"
       style={{ backgroundImage: 'url("/beyond-mountains.png")' }}
+      data-aos="fade-up"
     >
       <h3 className="text-3xl font-semibold text-white">
         Ready to take your project beyond?

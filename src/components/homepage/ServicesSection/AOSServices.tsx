@@ -1,3 +1,8 @@
+"use client";
+
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   FaReact,
   FaAngular,
@@ -21,10 +26,19 @@ import {
   SiVuedotjs,
 } from "react-icons/si";
 
-const Services = () => {
+const AOSServices = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
     <div className="flex flex-wrap justify-center gap-8">
-      <div className="bg-white shadow-xl rounded-lg p-6 flex-[1_1_400px] max-w-[400px] hover:shadow-2xl transition-shadow duration-300 border border-gray-200">
+      <div
+        className="bg-white shadow-xl rounded-lg p-6 flex-[1_1_400px] max-w-[400px] hover:shadow-2xl transition-shadow duration-300 border border-gray-200"
+        data-aos="fade-up"
+      >
         <h3 className="text-2xl font-semibold mb-4 text-[#6e3d06]">
           Frontend Development
         </h3>
@@ -42,7 +56,10 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="bg-white shadow-xl rounded-lg p-6 flex-[1_1_400px] max-w-[400px] hover:shadow-2xl transition-shadow duration-300 border border-gray-200">
+      <div
+        className="bg-white shadow-xl rounded-lg p-6 flex-[1_1_400px] max-w-[400px] hover:shadow-2xl transition-shadow duration-300 border border-gray-200"
+        data-aos="fade-up"
+      >
         <h3 className="text-2xl font-semibold mb-4 text-gray-900">
           Backend Development
         </h3>
@@ -57,7 +74,10 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="bg-white shadow-xl rounded-lg p-6 flex-[1_1_400px] max-w-[400px] hover:shadow-2xl transition-shadow duration-300 border border-gray-200">
+      <div
+        className="bg-white shadow-xl rounded-lg p-6 flex-[1_1_400px] max-w-[400px] hover:shadow-2xl transition-shadow duration-300 border border-gray-200"
+        data-aos="fade-up"
+      >
         <h3 className="text-2xl font-semibold mb-4 text-[#5a2c2c]">
           Mobile Development
         </h3>
@@ -72,7 +92,10 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="bg-white shadow-xl rounded-lg p-6 flex-[1_1_400px] max-w-[400px] hover:shadow-2xl transition-shadow duration-300 border border-gray-200">
+      <div
+        className="bg-white shadow-xl rounded-lg p-6 flex-[1_1_400px] max-w-[400px] hover:shadow-2xl transition-shadow duration-300 border border-gray-200"
+        data-aos="fade-up"
+      >
         <h3 className="text-2xl font-semibold mb-4 text-[#006d77]">
           Consulting
         </h3>
@@ -87,7 +110,10 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="bg-white shadow-xl rounded-lg p-6 flex-[1_1_400px] max-w-[400px] hover:shadow-2xl transition-shadow duration-300 border border-gray-200">
+      <div
+        className="bg-white shadow-xl rounded-lg p-6 flex-[1_1_400px] max-w-[400px] hover:shadow-2xl transition-shadow duration-300 border border-gray-200"
+        data-aos="fade-up"
+      >
         <h3 className="text-2xl font-semibold mb-4 text-[#1b4d3e]">
           Deployment & Monitoring
         </h3>
@@ -105,4 +131,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default AOSServices;
