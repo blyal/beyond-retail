@@ -45,3 +45,10 @@ body {
   opacity: 0;
   animation: fadeIn 1.25s ease-out forwards;
 }
+
+/* Remove header for mobile landscape */
+@media (max-width: 1000px) and (orientation: landscape) {
+  header {
+    margin-top: 0 !important;
+  }
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 import { NAV_LINKS } from "@/constants/links";
 
 const maxWidthForMobile = 1000;
@@ -10,10 +10,6 @@ const Header = () => {
   const [scrollY, setScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isAtTop, setIsAtTop] = useState(true);
-  const [isMobileLandscape, setIsMobileLandscape] = useState(
-    window.innerWidth <= maxWidthForMobile &&
-      window.innerWidth > window.innerHeight
-  );
 
   // Function to handle scroll and check if the user is at the top of the page
   const handleScroll = () => {
@@ -25,24 +21,11 @@ const Header = () => {
     );
   };
 
-  const checkMobileLandscape = () => {
-    const isMobile = window.innerWidth <= maxWidthForMobile;
-    const isLandscape = window.innerWidth > window.innerHeight;
-    setIsMobileLandscape(isMobile && isLandscape);
-  };
-
-  // Track scroll position and initialize on page load
-  useLayoutEffect(() => {
-    // Check scroll position immediately when the component mounts
-    handleScroll();
-    checkMobileLandscape();
-    // Add scroll event listener
+  // Track scroll position and screen orientation after component mounts
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", checkMobileLandscape);
-    // Cleanup event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", checkMobileLandscape);
     };
   }, []);
 
@@ -61,7 +44,7 @@ const Header = () => {
     <>
       <header
         className={`fixed top-0 w-full p-4 z-50 transition-all bg-transparent ${
-          isScrolled || isMobileLandscape ? "bg-transparent" : "mt-[32px]"
+          isScrolled ? "bg-transparent" : "mt-[32px]"
         }`}
       >
         <div className="flex items-center justify-between">
