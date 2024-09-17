@@ -3,6 +3,8 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import ContactModal from "@/components/modals/ContactModal";
+import { ModalProvider } from "@/contexts/ModalContext";
 
 export const metadata: Metadata = {
   title: "Alex Blyth | Beyond",
@@ -22,9 +24,12 @@ export default function RootLayout({
         <meta name="description" content={metadata.description || ""} />
       </Head>
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ModalProvider>
+          <Header />
+          <main>{children}</main>
+          <ContactModal />
+          <Footer />
+        </ModalProvider>
       </body>
     </html>
   );
