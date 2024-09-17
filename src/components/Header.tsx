@@ -3,13 +3,14 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { NAV_LINKS } from "@/constants/links";
-
-const maxWidthForMobile = 1000;
+import { useModal } from "@/contexts/ModalContext";
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isAtTop, setIsAtTop] = useState(true);
+
+  const { openModal } = useModal();
 
   // Function to handle scroll and check if the user is at the top of the page
   const handleScroll = () => {
@@ -83,7 +84,8 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="transition-all duration-500 relative"
+                className="transition-all duration-500 relative cursor-pointer"
+                onClick={link.name === "Contact" ? openModal : undefined}
               >
                 <span className="bg-gradient-to-b from-[#e4f2a6] to-[#43c2e8] bg-clip-text text-transparent transition-all duration-500 hover:text-[#43c2e8]">
                   {link.name}
