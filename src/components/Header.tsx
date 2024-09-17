@@ -1,20 +1,49 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import { NAV_LINKS } from "@/constants/links";
+
+const maxWidthForMobile = 1000;
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
+  const [isMobileLandscape, setIsMobileLandscape] = useState(
+    window.innerWidth <= maxWidthForMobile &&
+      window.innerWidth > window.innerHeight
+  );
 
-  // Track scroll position to handle gradual changes
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
+  // Function to handle scroll and check if the user is at the top of the page
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    setScrollY(scrollPosition);
+    setIsAtTop(
+      scrollPosition === 0 &&
+        (!window.location.hash || window.location.hash === "#home")
+    );
+  };
+
+  const checkMobileLandscape = () => {
+    const isMobile = window.innerWidth <= maxWidthForMobile;
+    const isLandscape = window.innerWidth > window.innerHeight;
+    setIsMobileLandscape(isMobile && isLandscape);
+  };
+
+  // Track scroll position and initialize on page load
+  useLayoutEffect(() => {
+    // Check scroll position immediately when the component mounts
+    handleScroll();
+    checkMobileLandscape();
+    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", checkMobileLandscape);
+    // Cleanup event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", checkMobileLandscape);
+    };
   }, []);
 
   // Disable body scroll when menu is open
@@ -31,33 +60,37 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 w-full p-4 z-50 transition-all ${
-          isScrolled ? "bg-transparent" : "mt-[32px]"
+        className={`fixed top-0 w-full p-4 z-50 transition-all bg-transparent ${
+          isScrolled || isMobileLandscape ? "bg-transparent" : "mt-[32px]"
         }`}
       >
         <div className="flex items-center justify-between">
           {/* Logo Section */}
-          <div className="flex items-center">
+          <div
+            className={`flex items-center transition-opacity duration-500 ${
+              isAtTop ? "opacity-0" : "opacity-100"
+            } md:opacity-100`}
+          >
             <a href="#home">
               <Image
                 src="/logo.png"
                 alt="Logo"
-                width={isScrolled ? 60 : 100}
-                height={isScrolled ? 60 : 100}
+                width={isScrolled ? 80 : 100}
+                height={isScrolled ? 80 : 100}
                 className="transition-all duration-300"
               />
             </a>
           </div>
 
           {/* Beyond Name in the Center (only on desktop) */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+          <div className="absolute left-1/2 transform -translate-x-1/2">
             <Image
               src="/beyond-words-removedbg.png"
               alt="Venture Name"
               width={200}
               height={50}
               className={`transition-opacity duration-500 ${
-                isScrolled ? "opacity-0" : "opacity-100"
+                scrollY === 0 ? "opacity-100" : "opacity-0"
               }`}
             />
           </div>
@@ -77,7 +110,11 @@ const Header = () => {
           </nav>
 
           {/* Mobile Burger Menu */}
-          <div className="md:hidden">
+          <div
+            className={`md:hidden p-3 bg-[#00070D] rounded-md flex transition-opacity duration-500 ${
+              isAtTop ? "opacity-0" : "opacity-100"
+            }`}
+          >
             <button
               className="relative w-8 h-8 focus:outline-none z-50"
               onClick={() => setMenuOpen(!menuOpen)}
