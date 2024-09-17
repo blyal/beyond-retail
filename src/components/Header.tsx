@@ -71,7 +71,7 @@ const Header = () => {
               isAtTop ? "opacity-0" : "opacity-100"
             } md:opacity-100`}
           >
-            <a href="#home">
+            <a href="#home" onClick={() => setMenuOpen(false)}>
               <Image
                 src="/logo.png"
                 alt="Logo"
@@ -82,7 +82,7 @@ const Header = () => {
             </a>
           </div>
 
-          {/* Beyond Name in the Center (only on desktop) */}
+          {/* Beyond Name in the Center */}
           <div className="absolute left-1/2 transform -translate-x-1/2">
             <Image
               src="/beyond-words-removedbg.png"
@@ -148,34 +148,16 @@ const Header = () => {
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <a
-          href="/about"
-          className="text-2xl py-4"
-          onClick={() => setMenuOpen(false)}
-        >
-          About
-        </a>
-        <a
-          href="/services"
-          className="text-2xl py-4"
-          onClick={() => setMenuOpen(false)}
-        >
-          Services
-        </a>
-        <a
-          href="/portfolio"
-          className="text-2xl py-4"
-          onClick={() => setMenuOpen(false)}
-        >
-          Portfolio
-        </a>
-        <a
-          href="/contact"
-          className="text-2xl py-4"
-          onClick={() => setMenuOpen(false)}
-        >
-          Contact
-        </a>
+        {NAV_LINKS.map((link) => (
+          <a
+            key={link.name}
+            href={link.href}
+            className="text-2xl py-4"
+            onClick={() => setMenuOpen(false)}
+          >
+            {link.name}
+          </a>
+        ))}
       </div>
     </>
   );
