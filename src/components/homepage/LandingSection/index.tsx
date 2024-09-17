@@ -2,7 +2,7 @@ const LandingSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen bg-gradient-to-b from-[#00070D] to-[#00111A] text-white flex flex-col justify-center items-center px-4 md:px-0"
+      className="min-h-screen bg-gradient-to-b from-[#00070D] to-[#00111A] text-white flex flex-col justify-center items-center px-4"
     >
       <div className="text-center mt-32 fade-in">
         <h1 className="text-5xl font-bold mb-20">
