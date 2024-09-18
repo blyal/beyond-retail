@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const ContactForm = () => {
+const ContactForm = ({ onSuccess }: { onSuccess: () => void }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,10 +17,10 @@ const ContactForm = () => {
   const [startTime, setStartTime] = useState<number>(0); // Time-based check
 
   // Enable form submission after page load
-  useEffect(() => {
+  useState(() => {
     setFormEnabled(true); // Enable form on page load
     setStartTime(Date.now()); // Record form load time
-  }, []);
+  });
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -67,7 +67,10 @@ const ContactForm = () => {
         email: !isEmailValid,
       });
     } else {
-      alert("Form submitted");
+      // Simulate form submission
+      setTimeout(() => {
+        onSuccess(); // Show confirmation screen
+      }, 500);
     }
   };
 
