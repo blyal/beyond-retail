@@ -138,7 +138,14 @@ const Header = () => {
             key={link.name}
             href={link.href}
             className="text-2xl py-4"
-            onClick={() => setMenuOpen(false)}
+            onClick={
+              link.name === "Contact"
+                ? () => {
+                    setMenuOpen(false);
+                    openModal();
+                  }
+                : () => setMenuOpen(false)
+            }
           >
             {link.name}
           </a>
