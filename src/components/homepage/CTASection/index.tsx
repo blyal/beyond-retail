@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import CTAButton from "@/components/buttons/CTAButton";
 
 const CTASection = () => {
   useEffect(() => {
@@ -22,12 +23,9 @@ const CTASection = () => {
       </h3>
 
       <div>
-        <a
-          href="/contact"
-          className="bg-white text-black px-7 py-4 rounded-full font-semibold hover:bg-gradient-to-b from-[#e4f2a6] to-[#43c2e8] transition-all shadow-lg border border-white"
-        >
+        <CTAButton className="bg-white text-black px-7 py-4 hover:bg-gradient-to-b from-[#e4f2a6] to-[#43c2e8] shadow-lg border border-white">
           Book a Call
-        </a>
+        </CTAButton>
       </div>
     </section>
   );

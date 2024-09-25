@@ -1,3 +1,5 @@
+import CTAButton from "@/components/buttons/CTAButton";
+
 const LandingSection = () => {
   return (
     <section
@@ -12,12 +14,9 @@ const LandingSection = () => {
           Exceptional quality, delivered on time and on budget. The way it
           should be.
         </p>
-        <a
-          href="/contact"
-          className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gradient-to-b from-[#e4f2a6] to-[#43c2e8] hover:text-black mb-8"
-        >
+        <CTAButton className="bg-white text-blue-600 hover:bg-gradient-to-b from-[#e4f2a6] to-[#43c2e8] hover:text-black mb-8">
           Take Your Project Beyond
-        </a>
+        </CTAButton>
       </div>
     </section>
   );

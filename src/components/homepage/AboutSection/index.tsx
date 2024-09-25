@@ -1,4 +1,5 @@
 import AOSPicture from "./AOSPicture";
+import CTAButton from "@/components/buttons/CTAButton";
 
 const AboutSection = () => {
   return (
@@ -48,12 +49,9 @@ const AboutSection = () => {
         </div>
       </div>
       <div className="mt-12 text-center">
-        <a
-          href="/contact"
-          className="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-all"
-        >
+        <CTAButton className="bg-blue-600 text-white hover:bg-blue-700">
           Discuss Your Project with Alex
-        </a>
+        </CTAButton>
       </div>
     </section>
   );

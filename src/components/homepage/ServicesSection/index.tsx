@@ -1,4 +1,5 @@
 import AOSServices from "./AOSServices";
+import CTAButton from "@/components/buttons/CTAButton";
 
 const ServicesSection = () => {
   return (
@@ -25,12 +26,9 @@ const ServicesSection = () => {
 
         <AOSServices />
         <div className="mt-20">
-          <a
-            href="/contact"
-            className="bg-white text-[#0d8569] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all"
-          >
+          <CTAButton className="bg-white text-[#0d8569] hover:bg-gray-100">
             Book a Free Consultation
-          </a>
+          </CTAButton>
         </div>
       </div>
     </section>

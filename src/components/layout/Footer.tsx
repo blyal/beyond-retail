@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FaPhone, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import { NAV_LINKS } from "@/constants/links";
+import CTAAnchor from "@/components/buttons/CTAAnchor";
 
 const Footer = () => {
   return (
@@ -29,6 +30,7 @@ const Footer = () => {
                 {link.name}
               </a>
             ))}
+            <CTAAnchor />
           </div>
         </div>
 
