@@ -1,5 +1,6 @@
 "use client";
 
+import ContactModal from "@/components/modals/ContactModal";
 import { createContext, useContext, useState, ReactNode } from "react";
 
 interface ModalContextType {
@@ -27,6 +28,7 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
   return (
     <ModalContext.Provider value={{ isModalOpen, openModal, closeModal }}>
       {children}
+      <ContactModal />
     </ModalContext.Provider>
   );
 };

@@ -3,7 +3,6 @@ import Head from "next/head";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
-import ContactModal from "@/components/modals/ContactModal";
 import { ModalProvider } from "@/contexts/ModalContext";
 
 export const metadata: Metadata = {
@@ -26,10 +25,9 @@ export default function RootLayout({
       <body>
         <ModalProvider>
           <Header />
-          <main>{children}</main>
-          <ContactModal />
-          <Footer />
         </ModalProvider>
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
