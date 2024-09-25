@@ -21,6 +21,9 @@ export default function RootLayout({
       <Head>
         <title>{String(metadata.title)}</title>
         <meta name="description" content={metadata.description || ""} />
+        {/* preload landing images */}
+        <link rel="preload" href="/beyond-words-removedbg.webp" as="image" />
+        <link rel="preload" href="/logo.png" as="image" />
       </Head>
       <body>
         <ModalProvider>

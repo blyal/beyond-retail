@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef, ReactNode } from "react";
 import { FaTimes } from "react-icons/fa";
 import { createPortal } from "react-dom";
+import styles from "./Modal.module.scss";
 
 interface ModalProps {
   isOpen: boolean;
@@ -46,9 +47,8 @@ const Modal = ({ isOpen, onClose, resetContents, children }: ModalProps) => {
       >
         <div
           ref={modalRef}
-          className="relative rounded-xl shadow-lg transform transition-all duration-500 ease-out bg-cover bg-center max-h-screen w-full h-full md:w-auto md:h-auto md:max-w-lg overflow-y-auto flex flex-col"
+          className={`relative rounded-xl shadow-lg transform transition-all duration-500 ease-out bg-cover bg-center max-h-screen w-full h-full md:w-auto md:h-auto md:max-w-lg overflow-y-auto flex flex-col ${styles["inbox-background"]}`}
           style={{
-            backgroundImage: 'url("/inbox.jpg")',
             boxShadow: "0 8px 30px rgba(0, 0, 0, 0.15)",
             height: "600px",
           }}

@@ -18,11 +18,15 @@ const AOSPicture = () => {
       data-aos="fade-up"
     >
       <Image
-        src="/mw-filter.jpg"
+        src="/alex-portrait.webp"
         alt="Alex Blyth profile picture"
         width={600}
         height={600}
         className="rounded-full object-cover"
+        // fallback to JPG for older browsers
+        onError={(e) => {
+          (e.target as HTMLImageElement).src = "/alex-portrait.jpg";
+        }}
       />
     </div>
   );

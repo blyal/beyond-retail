@@ -1,0 +1,11 @@
+.inbox-background {
+  background-image: url("/inbox.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+@supports not (background-image: url("/inbox.webp")) {
+  .inbox-background {
+    background-image: url("/inbox.jpg");
+  }
+}

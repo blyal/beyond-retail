@@ -61,6 +61,7 @@ const Header = () => {
                 alt="Logo"
                 width={isScrolled ? 80 : 100}
                 height={isScrolled ? 80 : 100}
+                priority
                 className="transition-all duration-300"
               />
             </a>
@@ -69,13 +70,20 @@ const Header = () => {
           {/* Beyond Name in the Center */}
           <div className="absolute left-1/2 transform -translate-x-1/2">
             <Image
-              src="/beyond-words-removedbg.png"
+              src="/beyond-words-removedbg.webp"
               alt="Venture Name"
               width={200}
               height={50}
+              priority
+              loading="eager"
               className={`transition-opacity duration-500 ${
                 scrollY === 0 ? "opacity-100" : "opacity-0"
               }`}
+              // PNG fallback for older browsers
+              onError={(e) => {
+                (e.target as HTMLImageElement).src =
+                  "/beyond-words-removedbg.png";
+              }}
             />
           </div>
 
