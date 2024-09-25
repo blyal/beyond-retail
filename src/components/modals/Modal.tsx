@@ -1,18 +1,17 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, ReactNode } from "react";
 import { FaTimes } from "react-icons/fa";
 import { createPortal } from "react-dom";
-import ContactForm from "@/components/forms/ContactForm";
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
+  resetContents: () => void;
+  children: ReactNode;
 }
 
-const Modal = ({ isOpen, onClose }: ModalProps) => {
+const Modal = ({ isOpen, onClose, resetContents, children }: ModalProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [activeTab, setActiveTab] = useState("contact");
-  const [formSubmitted, setFormSubmitted] = useState(false);
 
   // Ref to capture modal container
   const modalRef = useRef<HTMLDivElement>(null);
@@ -27,19 +26,14 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
       setIsVisible(false);
       setTimeout(() => {
         setIsMounted(false);
-        setFormSubmitted(false); // Reset form state
+        resetContents(); // Reset form state
       }, 500);
     }
 
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [isOpen]);
-
-  // Handle form submission
-  const handleFormSuccess = () => {
-    setFormSubmitted(true); // Show confirmation screen after form submission
-  };
+  }, [isOpen, resetContents]);
 
   if (!isMounted) return null;
 
@@ -74,58 +68,7 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
               <FaTimes className="w-6 h-6" />
             </button>
 
-            {/* Modal Content with Tabs */}
-            <div className="relative z-10 text-white text-center h-full flex flex-col flex-grow align-center">
-              {!formSubmitted && (
-                <div className="flex justify-center mt-6">
-                  <button
-                    className={`px-4 py-2 text-lg font-semibold ${
-                      activeTab === "contact" ? "text-white" : "text-gray-400"
-                    }`}
-                    onClick={() => setActiveTab("contact")}
-                  >
-                    Send a Message
-                  </button>
-                  <button
-                    className={`px-4 py-2 text-lg font-semibold ${
-                      activeTab === "booking" ? "text-white" : "text-gray-400"
-                    }`}
-                    onClick={() => setActiveTab("booking")}
-                  >
-                    Book a Call
-                  </button>
-                </div>
-              )}
-
-              {/* Tab Content */}
-              {!formSubmitted && (
-                <div className="flex flex-col flex-grow justify-center">
-                  <div
-                    style={{
-                      display: activeTab === "contact" ? "block" : "none",
-                    }}
-                  >
-                    <ContactForm onSuccess={handleFormSuccess} />
-                  </div>
-                  <div
-                    style={{
-                      display: activeTab === "booking" ? "block" : "none",
-                    }}
-                  >
-                    <div className="flex flex-col justify-center items-center">
-                      <p className="text-lg">Booking system coming soon...</p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {formSubmitted && (
-                <div className="h-full flex flex-col justify-center items-center">
-                  <h2 className="text-2xl font-semibold">Thank you!</h2>
-                  <p>Your message has been successfully sent.</p>
-                </div>
-              )}
-            </div>
+            {children}
           </div>
         </div>
       </div>
