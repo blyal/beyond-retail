@@ -44,7 +44,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 w-full p-4 z-50 transition-all bg-transparent ${
+        className={`fixed top-0 w-full p-4 z-40 transition-all bg-transparent ${
           isScrolled ? "bg-transparent" : "mt-[32px]"
         }`}
       >
@@ -85,13 +85,20 @@ const Header = () => {
                 key={link.name}
                 href={link.href}
                 className="transition-all duration-500 relative cursor-pointer"
-                onClick={link.name === "Contact" ? openModal : undefined}
               >
                 <span className="bg-gradient-to-b from-[#e4f2a6] to-[#43c2e8] bg-clip-text text-transparent transition-all duration-500 hover:text-[#43c2e8]">
                   {link.name}
                 </span>
               </a>
             ))}
+            <a
+              className="transition-all duration-500 relative cursor-pointer"
+              onClick={openModal}
+            >
+              <span className="bg-gradient-to-b from-[#e4f2a6] to-[#43c2e8] bg-clip-text text-transparent transition-all duration-500 hover:text-[#43c2e8]">
+                Contact
+              </span>
+            </a>
           </nav>
 
           {/* Mobile Burger Menu */}
@@ -138,18 +145,20 @@ const Header = () => {
             key={link.name}
             href={link.href}
             className="text-2xl py-4"
-            onClick={
-              link.name === "Contact"
-                ? () => {
-                    setMenuOpen(false);
-                    openModal();
-                  }
-                : () => setMenuOpen(false)
-            }
+            onClick={() => setMenuOpen(false)}
           >
             {link.name}
           </a>
         ))}
+        <a
+          className="text-2xl py-4"
+          onClick={() => {
+            setMenuOpen(false);
+            openModal();
+          }}
+        >
+          Contact
+        </a>
       </div>
     </>
   );
