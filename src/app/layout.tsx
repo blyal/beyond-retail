@@ -24,6 +24,8 @@ export default function RootLayout({
         {/* preload landing images */}
         <link rel="preload" href="/beyond-words-removedbg.webp" as="image" />
         <link rel="preload" href="/logo.png" as="image" />
+        <link rel="preload" href="/inbox.webp" as="image" />
+        <link rel="preload" href="/beyond-mountains.webp" as="image" />
       </Head>
       <body>
         <ModalProvider>
