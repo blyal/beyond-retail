@@ -20,11 +20,10 @@ const AboutSection = () => {
           <p className="text-lg text-gray-700 mb-8">
             I’m Alex Blyth, a software engineer and consultant specializing in
             frontend, backend, and mobile development. With years of experience,
-            I help businesses develop the applications they need to achieve
-            their goals, whether it’s digitizing operations or building a
-            website. My focus is on delivering practical, results-driven
-            solutions that make your vision a reality, from ideation to
-            deployment.
+            I help businesses build the solutions they need to achieve their
+            goals—whether it’s digitizing operations or building a website. My
+            focus is on delivering practical, results-driven solutions that make
+            your vision a reality, from ideation to deployment.
           </p>
           <h3 className="text-2xl font-semibold text-blue-800 mb-4">
             Why Work with Me
