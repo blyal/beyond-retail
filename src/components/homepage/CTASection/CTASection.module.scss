@@ -1,13 +1,9 @@
-.bg-unloaded {
-  background-image: none;
-}
-
-.bg-loaded {
+.background-image {
   background-image: url("/beyond-mountains.webp");
 }
 
 @supports not (background-image: url("/beyond-mountains.webp")) {
-  .bg-loaded {
+  .background-image {
     background-image: url("/beyond-mountains.png");
   }
 }
