@@ -36,7 +36,7 @@ const Footer = () => {
 
         <div className="flex items-center justify-center md:justify-end flex-1 space-x-8 mb-4 md:mb-0">
           <a
-            href="mailto:beyondnl@proton.me"
+            href="mailto:contact@beyonddevelopment.co"
             className="hover:text-gray-400"
             title="Send an Email"
           >
