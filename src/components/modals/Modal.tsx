@@ -13,9 +13,19 @@ interface ModalProps {
 const Modal = ({ isOpen, onClose, resetContents, children }: ModalProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   // Ref to capture modal container
   const modalRef = useRef<HTMLDivElement>(null);
+
+  // Preload the background image
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/inbox.webp";
+    img.onload = () => {
+      setIsImageLoaded(true);
+    };
+  }, []);
 
   useEffect(() => {
     if (isOpen) {
@@ -36,7 +46,7 @@ const Modal = ({ isOpen, onClose, resetContents, children }: ModalProps) => {
     };
   }, [isOpen, resetContents]);
 
-  if (!isMounted) return null;
+  if (!isMounted || !isImageLoaded) return null;
 
   return createPortal(
     <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">

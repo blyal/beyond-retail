@@ -22,10 +22,20 @@ export default function RootLayout({
         <title>{String(metadata.title)}</title>
         <meta name="description" content={metadata.description || ""} />
         {/* preload landing images */}
-        <link rel="preload" href="/beyond-words-removedbg.webp" as="image" />
+        <link
+          rel="preload"
+          href="/beyond-words-removedbg.webp"
+          as="image"
+          type="image/webp"
+        />
         <link rel="preload" href="/logo.png" as="image" />
-        <link rel="preload" href="/inbox.webp" as="image" />
-        <link rel="preload" href="/beyond-mountains.webp" as="image" />
+        <link rel="preload" href="/inbox.webp" as="image" type="image/webp" />
+        <link
+          rel="preload"
+          href="/beyond-mountains.webp"
+          as="image"
+          type="image/webp"
+        />
       </Head>
       <body>
         <ModalProvider>
