@@ -36,21 +36,21 @@ const Footer = () => {
 
         <div className="flex items-center justify-center md:justify-end flex-1 space-x-8 mb-4 md:mb-0">
           <a
-            href="mailto:info@beyondwords.com"
+            href="mailto:beyondnl@proton.me"
             className="hover:text-gray-400"
-            title="Email us"
+            title="Send an Email"
           >
             <FaEnvelope size={24} />
           </a>
           <a
-            href="tel:+1234567890"
+            href="tel:+31626554794"
             className="hover:text-gray-400"
-            title="Call us"
+            title="Call"
           >
             <FaPhone size={24} />
           </a>
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/alex-blyth-575107170/"
             target="_blank"
             className="hover:text-gray-400"
             title="LinkedIn"
@@ -58,7 +58,7 @@ const Footer = () => {
             <FaLinkedin size={24} />
           </a>
           <a
-            href="https://www.github.com"
+            href="https://www.github.com/blyal"
             target="_blank"
             className="hover:text-gray-400"
             title="GitHub"
