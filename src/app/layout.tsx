@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
 import { ModalProvider } from "@/contexts/ModalContext";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Alex Blyth | Beyond",
@@ -38,6 +39,9 @@ export default function RootLayout({
         />
       </Head>
       <body>
+        <div>
+          <Toaster toastOptions={{ duration: 10000 }} />
+        </div>
         <ModalProvider>
           <Header />
         </ModalProvider>

@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import styles from "./ContactForm.module.scss";
+import toast from "react-hot-toast";
 
 const ContactForm = ({ onSuccess }: { onSuccess: () => void }) => {
   const [formData, setFormData] = useState({
@@ -16,6 +18,7 @@ const ContactForm = ({ onSuccess }: { onSuccess: () => void }) => {
   });
   const [formEnabled, setFormEnabled] = useState(false); // JavaScript validation
   const [startTime, setStartTime] = useState<number>(0); // Time-based check
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Enable form submission after page load
   useState(() => {
@@ -70,18 +73,24 @@ const ContactForm = ({ onSuccess }: { onSuccess: () => void }) => {
       return;
     }
 
+    setIsSubmitting(true);
+
     emailjs
       .send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, // Replace with your EmailJS Template ID
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         formData,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY! // Replace with your EmailJS User ID (from EmailJS dashboard)
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       )
       .then(
-        () => onSuccess(),
+        () => {
+          setIsSubmitting(false);
+          onSuccess();
+        },
         (err) => {
-          //TODO: handle error
-          console.error("FAILED...", err);
+          setIsSubmitting(false);
+          toast.error("Something went wrong. Please try again.");
+          console.error("Error...", err);
         }
       );
   };
@@ -153,10 +162,26 @@ const ContactForm = ({ onSuccess }: { onSuccess: () => void }) => {
       </div>
       <button
         type="submit"
-        className="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-500 hover:text-white mb-8"
-        disabled={!formEnabled}
+        className={`relative px-8 py-3 rounded-full font-semibold mb-8 
+          ${
+            isSubmitting
+              ? "bg-blue-700 text-white"
+              : "bg-white text-green-600 hover:bg-blue-500 hover:text-white"
+          }`}
+        disabled={!formEnabled || isSubmitting}
       >
-        Send
+        <span
+          className={`transition-opacity ${
+            isSubmitting ? "opacity-0" : "opacity-100"
+          }`}
+        >
+          Send
+        </span>
+        {isSubmitting && (
+          <div className="absolute inset-0 flex justify-center items-center">
+            <div className={styles.loader} />
+          </div>
+        )}
       </button>
     </form>
   );
