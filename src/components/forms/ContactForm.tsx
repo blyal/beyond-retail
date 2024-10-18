@@ -1,17 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "emailjs-com";
 
 const ContactForm = ({ onSuccess }: { onSuccess: () => void }) => {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    emailAddress: "",
     message: "",
     botField: "", // Honeypot field
   });
   const [errors, setErrors] = useState({
     name: false,
-    email: false,
+    emailAddress: false,
   });
   const [formEnabled, setFormEnabled] = useState(false); // JavaScript validation
   const [startTime, setStartTime] = useState<number>(0); // Time-based check
@@ -36,14 +37,14 @@ const ContactForm = ({ onSuccess }: { onSuccess: () => void }) => {
     }));
   };
 
-  const validateEmail = (email: string) => {
+  const validateEmail = (emailAddress: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    return emailRegex.test(emailAddress);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const { name, email, botField } = formData;
+    const { name, emailAddress, botField } = formData;
 
     // Check honeypot field (should be empty for real users)
     if (botField) {
@@ -59,19 +60,30 @@ const ContactForm = ({ onSuccess }: { onSuccess: () => void }) => {
     }
 
     const isNameValid = name.trim() !== "";
-    const isEmailValid = validateEmail(email);
+    const isEmailValid = validateEmail(emailAddress);
 
     if (!isNameValid || !isEmailValid) {
       setErrors({
         name: !isNameValid,
-        email: !isEmailValid,
+        emailAddress: !isEmailValid,
       });
-    } else {
-      // Simulate form submission
-      setTimeout(() => {
-        onSuccess(); // Show confirmation screen
-      }, 500);
+      return;
     }
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, // Replace with your EmailJS Template ID
+        formData,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY! // Replace with your EmailJS User ID (from EmailJS dashboard)
+      )
+      .then(
+        () => onSuccess(),
+        (err) => {
+          //TODO: handle error
+          console.error("FAILED...", err);
+        }
+      );
   };
 
   return (
@@ -105,17 +117,20 @@ const ContactForm = ({ onSuccess }: { onSuccess: () => void }) => {
         />
       </div>
       <div>
-        <label htmlFor="email" className="block text-m text-white text-left">
-          Email
+        <label
+          htmlFor="emailAddress"
+          className="block text-m text-white text-left"
+        >
+          Email Address
         </label>
         <input
           type="email"
-          id="email"
-          name="email"
-          value={formData.email}
+          id="emailAddress"
+          name="emailAddress"
+          value={formData.emailAddress}
           onChange={handleChange}
           className={`mt-1 block w-full border ${
-            errors.email
+            errors.emailAddress
               ? "border-red-500 ring-1 ring-red-500"
               : "border-gray-300"
           } rounded-md p-2 text-gray-900 bg-white`}
