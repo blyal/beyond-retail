@@ -33,7 +33,7 @@ const AOSPicture = () => {
         alt="Alex Blyth profile picture"
         width={700}
         height={700}
-        className="rounded-lg object-cover"
+        className="rounded-lg object-cover shadow-2xl"
       />
     </div>
   );
