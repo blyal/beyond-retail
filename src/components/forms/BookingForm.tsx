@@ -54,7 +54,7 @@ const BookingForm = ({ onSuccess }: { onSuccess: () => void }) => {
     name: "",
     company: "",
     emailAddress: "",
-    timezone: timezones[8],
+    timezone: timezones[5],
     date: "",
     preferredTime: preferredTimes[0],
     alternateTimes: "",
