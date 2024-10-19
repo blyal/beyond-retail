@@ -17,7 +17,7 @@ const AOSPicture = () => {
       className="md:w-2/5 flex justify-center mb-8 md:mb-0 md:mr-12"
       data-aos="fade-up"
     >
-      <Image
+      {/* <Image
         src="/alex-portrait.webp"
         alt="Alex Blyth profile picture"
         width={600}
@@ -27,6 +27,13 @@ const AOSPicture = () => {
         onError={(e) => {
           (e.target as HTMLImageElement).src = "/alex-portrait.jpg";
         }}
+      /> */}
+      <Image
+        src="/office-portrait.png"
+        alt="Alex Blyth profile picture"
+        width={700}
+        height={700}
+        className="rounded-lg object-cover"
       />
     </div>
   );
