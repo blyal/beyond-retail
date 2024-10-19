@@ -60,7 +60,7 @@ const Modal = ({ isOpen, onClose, resetContents, children }: ModalProps) => {
           className={`relative rounded-xl shadow-lg transform transition-all duration-500 ease-out bg-cover bg-center max-h-screen w-full h-full md:w-auto md:h-auto md:max-w-lg overflow-y-auto flex flex-col ${styles["inbox-background"]}`}
           style={{
             boxShadow: "0 8px 30px rgba(0, 0, 0, 0.15)",
-            height: "600px",
+            height: "700px",
           }}
         >
           <div

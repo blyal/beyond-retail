@@ -2,11 +2,12 @@
 
 import { useModal } from "@/contexts/ModalContext";
 import Modal from "./Modal";
-import ContactForm from "@/components/forms/ContactForm";
+import MessageForm from "@/components/forms/MessageForm";
 import { useState } from "react";
+import BookingForm from "../forms/BookingForm";
 
 export default function ContactModal() {
-  const [activeTab, setActiveTab] = useState("contact");
+  const [activeTab, setActiveTab] = useState("message");
   const [formSubmitted, setFormSubmitted] = useState(false);
   const { isModalOpen, closeModal } = useModal();
 
@@ -24,9 +25,9 @@ export default function ContactModal() {
           <div className="flex justify-center mt-4">
             <button
               className={`px-4 py-2 text-lg font-semibold ${
-                activeTab === "contact" ? "text-white" : "text-gray-400"
+                activeTab === "message" ? "text-white" : "text-gray-400"
               }`}
-              onClick={() => setActiveTab("contact")}
+              onClick={() => setActiveTab("message")}
             >
               Send a Message
             </button>
@@ -43,13 +44,13 @@ export default function ContactModal() {
 
         {/* Tab Content */}
         {!formSubmitted && (
-          <div className="flex flex-col flex-grow justify-center">
+          <div className="flex flex-col justify-center">
             <div
               style={{
-                display: activeTab === "contact" ? "block" : "none",
+                display: activeTab === "message" ? "block" : "none",
               }}
             >
-              <ContactForm onSuccess={handleFormSuccess} />
+              <MessageForm onSuccess={handleFormSuccess} />
               <div className="mt-6">
                 <a
                   className="text-white"
@@ -67,17 +68,27 @@ export default function ContactModal() {
                 display: activeTab === "booking" ? "block" : "none",
               }}
             >
-              <div className="flex flex-col justify-center items-center">
-                <p className="text-lg">Booking system coming soon...</p>
-              </div>
+              <BookingForm onSuccess={handleFormSuccess} />
             </div>
           </div>
         )}
 
         {formSubmitted && (
           <div className="h-full flex flex-col justify-center items-center">
-            <h2 className="text-2xl font-semibold">Thank you!</h2>
-            <p>Your message has been successfully sent.</p>
+            {activeTab === "message" && (
+              <>
+                <h2 className="text-2xl font-semibold">Thank you!</h2>
+                <p>Your message has been successfully sent.</p>
+              </>
+            )}
+            {activeTab === "booking" && (
+              <>
+                <h2 className="text-2xl font-semibold">
+                  Call Request Received
+                </h2>
+                <p>You will receive email confirmation within 24 hours.</p>
+              </>
+            )}
           </div>
         )}
       </div>

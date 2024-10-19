@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import emailjs from "emailjs-com";
-import styles from "./ContactForm.module.scss";
+import styles from "./forms.module.scss";
 import toast from "react-hot-toast";
 
-const ContactForm = ({ onSuccess }: { onSuccess: () => void }) => {
+const MessageForm = ({ onSuccess }: { onSuccess: () => void }) => {
   const [formData, setFormData] = useState({
     name: "",
+    company: "",
     emailAddress: "",
     message: "",
     botField: "", // Honeypot field
@@ -78,7 +79,7 @@ const ContactForm = ({ onSuccess }: { onSuccess: () => void }) => {
     emailjs
       .send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_MESSAGE_TEMPLATE_ID!,
         formData,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       )
@@ -123,6 +124,20 @@ const ContactForm = ({ onSuccess }: { onSuccess: () => void }) => {
               : "border-gray-300"
           } rounded-md p-2 text-gray-900 bg-white`}
           required
+        />
+      </div>
+
+      <div>
+        <label htmlFor="company" className="block text-m text-white text-left">
+          Company
+        </label>
+        <input
+          type="text"
+          id="company"
+          name="company"
+          value={formData.company}
+          onChange={handleChange}
+          className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-gray-900 bg-white"
         />
       </div>
       <div>
@@ -187,4 +202,4 @@ const ContactForm = ({ onSuccess }: { onSuccess: () => void }) => {
   );
 };
 
-export default ContactForm;
+export default MessageForm;
