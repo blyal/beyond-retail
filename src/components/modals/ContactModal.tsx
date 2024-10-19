@@ -21,7 +21,7 @@ export default function ContactModal() {
     >
       <div className="relative z-10 text-white text-center h-full flex flex-col flex-grow align-center">
         {!formSubmitted && (
-          <div className="flex justify-center mt-6">
+          <div className="flex justify-center mt-2">
             <button
               className={`px-4 py-2 text-lg font-semibold ${
                 activeTab === "contact" ? "text-white" : "text-gray-400"
@@ -50,6 +50,17 @@ export default function ContactModal() {
               }}
             >
               <ContactForm onSuccess={handleFormSuccess} />
+              <div className="mt-6">
+                <a
+                  className="text-white"
+                  href="mailto:contact@beyonddevelopment.co"
+                >
+                  📤{" "}
+                  <span className="underline hover:text-gray-200">
+                    contact@beyonddevelopment.co
+                  </span>
+                </a>
+              </div>
             </div>
             <div
               style={{
