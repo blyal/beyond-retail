@@ -78,13 +78,13 @@ const AOSServices = () => {
         className="bg-white shadow-xl rounded-lg p-6 flex-[1_1_400px] max-w-[400px] hover:shadow-2xl transition-shadow duration-300 border border-gray-200"
         data-aos="fade-up"
       >
-        <h3 className="text-2xl font-semibold mb-4 text-[#5a2c2c]">
+        <h3 className="text-2xl font-semibold mb-4 text-[#7a2b2b]">
           Mobile Development
         </h3>
         <p className="text-black mb-4">
           Cross-platform mobile apps for iOS and Android.
         </p>
-        <div className="flex flex-wrap justify-center space-x-4 text-[#5a2c2c]">
+        <div className="flex flex-wrap justify-center space-x-4 text-[#7a2b2b]">
           <SiFlutter size={32} />
           <FaReact size={32} />
           <SiJavascript size={32} />
