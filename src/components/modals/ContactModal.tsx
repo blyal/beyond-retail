@@ -21,7 +21,7 @@ export default function ContactModal() {
     >
       <div className="relative z-10 text-white text-center h-full flex flex-col flex-grow align-center">
         {!formSubmitted && (
-          <div className="flex justify-center mt-2">
+          <div className="flex justify-center mt-4">
             <button
               className={`px-4 py-2 text-lg font-semibold ${
                 activeTab === "contact" ? "text-white" : "text-gray-400"
