@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      letterSpacing: {
+        "extra-widest": "0.4em",
+      },
     },
   },
   plugins: [],
