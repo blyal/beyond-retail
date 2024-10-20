@@ -17,7 +17,7 @@ const CTASection = () => {
 
   return (
     <section
-      className={`min-h-screen py-16 bg-center bg-cover bg-no-repeat text-center relative flex flex-col justify-between items-center px-4 md:px-0 ${styles["background-image"]}`}
+      className={`min-h-screen py-16 bg-center bg-cover bg-no-repeat text-center relative flex flex-col justify-between items-center px-4 md:px-0 mobileLandscape:py-10 ${styles["background-image"]}`}
       data-aos="fade-up"
     >
       <h3 className="text-3xl font-semibold text-white">

@@ -20,7 +20,7 @@ export default function ContactModal() {
       onClose={closeModal}
       resetContents={() => setFormSubmitted(false)}
     >
-      <div className="relative z-10 text-white text-center h-full flex flex-col flex-grow align-center">
+      <div className="relative z-10 text-white text-center h-full flex flex-col flex-grow">
         {!formSubmitted && (
           <div className="flex justify-center mt-4">
             <button
@@ -56,8 +56,8 @@ export default function ContactModal() {
                   className="text-white"
                   href="mailto:contact@beyonddevelopment.co"
                 >
-                  📤{" "}
-                  <span className="underline hover:text-gray-200">
+                  📤
+                  <span className="underline hover:text-gray-200 ml-3">
                     contact@beyonddevelopment.co
                   </span>
                 </a>

@@ -14,7 +14,7 @@ const AOSPicture = () => {
   }, []);
   return (
     <div
-      className="md:w-2/5 flex justify-center mb-8 md:mb-0 md:mr-12"
+      className="md:w-2/5 flex justify-center mb-8 md:mb-0 md:mr-12 mobileLandscape:mr-0"
       data-aos="fade-up"
     >
       {/* <Image
@@ -31,9 +31,9 @@ const AOSPicture = () => {
       <Image
         src="/office-portrait.png"
         alt="Alex Blyth profile picture"
-        width={700}
-        height={700}
-        className="rounded-lg object-cover shadow-2xl"
+        width={800}
+        height={800}
+        className="rounded-lg object-cover shadow-2xl ipadPortrait:mb-12 mobileLandscape:mb-6"
       />
     </div>
   );
