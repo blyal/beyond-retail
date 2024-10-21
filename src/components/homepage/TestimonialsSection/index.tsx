@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { useEffect, useState } from "react";
+import { doesBrowserSupportWebP, preloadImages } from "@/utils";
 
 interface ArrowProps {
   onClick?: () => void;
@@ -44,6 +46,40 @@ const settings = {
 };
 
 const TestimonialsSection = () => {
+  const [browserUsesWebP, setBrowserUsesWebP] = useState(true);
+
+  useEffect(() => {
+    doesBrowserSupportWebP().then((result) => {
+      setBrowserUsesWebP(result);
+    });
+  }, []);
+
+  useEffect(() => {
+    const imagesToPreload = [
+      "/moeliker.webp",
+      "/visser.webp",
+      "/nsl-logo-square.webp",
+      "/khang.webp",
+      "/vogel.webp",
+      "/moeliker.jpeg",
+      "/visser.jpeg",
+      "/nsl-logo-square.png",
+      "/vogel.jpeg",
+      "/khang.jpeg",
+    ];
+    preloadImages(imagesToPreload);
+  }, []);
+
+  const getImageSource = (imageName: string) => {
+    if (browserUsesWebP) {
+      return `/${imageName}.webp`;
+    } else if (imageName === "nsl-logo-square") {
+      return `/${imageName}.png`;
+    } else {
+      return `/${imageName}.jpeg`;
+    }
+  };
+
   return (
     <section
       id="endorsements"
@@ -69,35 +105,35 @@ const TestimonialsSection = () => {
             name="Richard Moeliker"
             position="Global Country Manager"
             company="Hedin IT"
-            image="/moeliker.jpeg"
+            image={getImageSource("moeliker")}
           />
           <Testimonial
             quote="He especially impressed me with his ability to take ownership and drive the implementation of complex features from beginning to end."
             name="Paul Visser"
             position="Head of Engineering"
             company="Momenterie"
-            image="/visser.jpeg"
+            image={getImageSource("visser")}
           />
           <Testimonial
             quote="We engaged Alex to develop a client server network performance measurement system for field testing consumer broadband and mobile data networks. [...] Our project was successful thanks to Alex's contribution, and we would work with him again."
             name="Dr Mike Hamilton-Jenkins"
             position="Principal Technologist"
             company="Network Strategies Limited"
-            image="/nsl-logo-square.png"
+            image={getImageSource("nsl-logo-square")}
           />
           <Testimonial
             quote="Alex demonstrated exceptional skill, attentiveness, and the ability to translate my vision into a user-friendly frontend for our end users."
             name="Frank Vogel"
             position="DMS & Application Specialist"
             company="Hedin IT"
-            image="/vogel.jpeg"
+            image={getImageSource("vogel")}
           />
           <Testimonial
             quote="What impressed me most about Alex was his ability to stay calm and deliver high quality features on time, even with a tight schedule in the background. It was a pleasure to work with Alex on the project."
             name="Khang Ho"
             position="Digital Designer"
             company="MaibornWolff GmbH"
-            image="/khang.jpeg"
+            image={getImageSource("khang")}
           />
         </Slider>
         <Image
