@@ -122,6 +122,13 @@ const TestimonialsSection = () => {
             image={getImageSource("nsl-logo-square")}
           />
           <Testimonial
+            quote="I was impressed with how fast he adapted to our project [...] he quickly evolved to a leading position who also trained our new colleagues."
+            name="Angelika Pridein"
+            position="Product Owner"
+            company="congstar"
+            image={getImageSource("angelika")}
+          />
+          <Testimonial
             quote="Alex demonstrated exceptional skill, attentiveness, and the ability to translate my vision into a user-friendly frontend for our end users."
             name="Frank Vogel"
             position="DMS & Application Specialist"
