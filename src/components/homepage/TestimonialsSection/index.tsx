@@ -73,7 +73,7 @@ const TestimonialsSection = () => {
   const getImageSource = (imageName: string) => {
     if (browserUsesWebP) {
       return `/${imageName}.webp`;
-    } else if (imageName === "nsl-logo-square") {
+    } else if (imageName === "nsl-logo-square" || imageName === "dgt-logo") {
       return `/${imageName}.png`;
     } else {
       return `/${imageName}.jpeg`;
@@ -106,6 +106,13 @@ const TestimonialsSection = () => {
             position="Global Country Manager"
             company="Hedin IT"
             image={getImageSource("moeliker")}
+          />
+          <Testimonial
+            quote="He provided clear communication throughout the project and delivered well-documented code, which made the process seamless for us. Alex took on a project we didn't have time or expertise for, and thanks to his efforts, we now have a solution we can confidently move forward with. Highly recommended!"
+            name="Thimo Veldkamp"
+            position="Manager Product Innovation"
+            company="Digital Game Technology"
+            image={getImageSource("dgt-logo")}
           />
           <Testimonial
             quote="He especially impressed me with his ability to take ownership and drive the implementation of complex features from beginning to end."
