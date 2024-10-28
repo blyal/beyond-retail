@@ -1,23 +1,40 @@
 "use client";
 
-import { useModal } from "@/contexts/ModalContext";
+import { useModal } from "@/contexts/ContactModalContext";
 import Modal from "./Modal";
 import MessageForm from "@/components/forms/MessageForm";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BookingForm from "../forms/BookingForm";
+import styles from "./ContactModal.module.scss";
 
 export default function ContactModal() {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
   const [activeTab, setActiveTab] = useState("message");
   const [formSubmitted, setFormSubmitted] = useState(false);
+
   const { isModalOpen, closeModal } = useModal();
+
+  // Preload the background image
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/inbox.webp";
+    img.onload = () => {
+      setIsImageLoaded(true);
+    };
+  }, []);
 
   const handleFormSuccess = () => {
     setFormSubmitted(true); // Show confirmation screen after form submission
   };
+
+  if (!isImageLoaded) return null;
+
   return (
     <Modal
       isOpen={isModalOpen}
       onClose={closeModal}
+      heightInPx={700}
+      backgroundImgClassname={styles["inbox-background"]}
       resetContents={() => setFormSubmitted(false)}
     >
       <div className="relative z-10 text-white text-center h-full flex flex-col flex-grow">

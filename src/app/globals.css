@@ -80,3 +80,10 @@ body {
   font-weight: 700;
   font-style: bold;
 }
+
+@font-face {
+  font-family: "Calloveya";
+  src: url("/fonts/Calloveya.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}

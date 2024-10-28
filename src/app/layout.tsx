@@ -3,7 +3,7 @@ import Head from "next/head";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
-import { ModalProvider } from "@/contexts/ModalContext";
+import { ModalProvider } from "@/contexts/ContactModalContext";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {

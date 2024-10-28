@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { NAV_LINKS } from "@/constants/links";
-import { useModal } from "@/contexts/ModalContext";
+import { useModal } from "@/contexts/ContactModalContext";
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -55,7 +56,7 @@ const Header = () => {
               isAtTop ? "opacity-0" : "opacity-100"
             } md:opacity-100`}
           >
-            <a href="#home" onClick={() => setMenuOpen(false)}>
+            <Link href="/#home" onClick={() => setMenuOpen(false)}>
               <Image
                 src="/logo.png"
                 alt="Logo"
@@ -64,7 +65,7 @@ const Header = () => {
                 priority
                 className="transition-all duration-300"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Beyond Name in the Center */}
@@ -89,15 +90,15 @@ const Header = () => {
 
           <nav className="hidden md:flex space-x-6 bg-[#00070D] py-2 px-4 rounded-lg">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                href={`/${link.href}`}
                 className="transition-all duration-500 relative cursor-pointer"
               >
                 <span className="bg-gradient-to-b from-[#e4f2a6] to-[#43c2e8] bg-clip-text text-transparent transition-all duration-500 hover:text-[#43c2e8]">
                   {link.name}
                 </span>
-              </a>
+              </Link>
             ))}
             <a
               className="transition-all duration-500 relative cursor-pointer"
@@ -149,14 +150,14 @@ const Header = () => {
         }`}
       >
         {NAV_LINKS.map((link) => (
-          <a
+          <Link
             key={link.name}
-            href={link.href}
+            href={`/${link.href}`}
             className="text-2xl py-4"
             onClick={() => setMenuOpen(false)}
           >
             {link.name}
-          </a>
+          </Link>
         ))}
         <a
           className="text-2xl py-4"

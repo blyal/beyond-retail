@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ModalProvider, useModal } from "../../contexts/ModalContext";
+import { ModalProvider, useModal } from "../../contexts/ContactModalContext";
 
 const CTAAnchor: React.FC = () => {
   return (

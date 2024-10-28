@@ -5,7 +5,7 @@ import CTAAnchor from "@/components/buttons/CTAAnchor";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white pt-6 pb-6">
+    <footer id="footer" className="bg-gray-800 text-white pt-6 pb-6">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-center">
         <div className="flex items-center justify-center md:justify-start flex-1 mb-4 md:mb-0">
           <a href="#home">

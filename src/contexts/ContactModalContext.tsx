@@ -3,16 +3,18 @@
 import ContactModal from "@/components/modals/ContactModal";
 import { createContext, useContext, useState, ReactNode } from "react";
 
-interface ModalContextType {
+interface ContactModalContextType {
   openModal: () => void;
   closeModal: () => void;
   isModalOpen: boolean;
 }
 
-const ModalContext = createContext<ModalContextType | undefined>(undefined);
+const ContactModalContext = createContext<ContactModalContextType | undefined>(
+  undefined
+);
 
 export function useModal() {
-  const context = useContext(ModalContext);
+  const context = useContext(ContactModalContext);
   if (!context) {
     throw new Error("useModal must be used within a ModalProvider");
   }
@@ -26,9 +28,11 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <ModalContext.Provider value={{ isModalOpen, openModal, closeModal }}>
+    <ContactModalContext.Provider
+      value={{ isModalOpen, openModal, closeModal }}
+    >
       {children}
       <ContactModal />
-    </ModalContext.Provider>
+    </ContactModalContext.Provider>
   );
 };
