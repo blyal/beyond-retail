@@ -45,7 +45,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 w-full p-4 z-40 transition-all bg-transparent ${
+        className={`fixed top-0 w-full p-4 z-50 transition-all bg-transparent ${
           isScrolled ? "bg-transparent" : "mt-[32px]"
         }`}
       >
