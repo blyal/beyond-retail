@@ -90,8 +90,8 @@ const Subsection = ({ name, terms }: SubsectionProps) => {
     <li className="mb-4">
       <strong>{name}</strong>
       <ol className="list-decimal list-inside ml-3">
-        {terms.map((term) => (
-          <li>{term}</li>
+        {terms.map((term, index) => (
+          <li key={index}>{term}</li>
         ))}
       </ol>
     </li>
