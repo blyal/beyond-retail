@@ -1,7 +1,7 @@
 "use client";
 
 import Testimonial from "./Testimonial";
-import Slider from "react-slick";
+import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
@@ -35,10 +35,11 @@ const NextArrow = ({ onClick }: ArrowProps) => {
   );
 };
 
-const settings = {
+const settings: Settings = {
   dots: false,
   infinite: true,
   speed: 500,
+  lazyLoad: "progressive",
   slidesToShow: 1,
   slidesToScroll: 1,
   prevArrow: <PrevArrow />,
@@ -55,20 +56,25 @@ const TestimonialsSection = () => {
   }, []);
 
   useEffect(() => {
-    const imagesToPreload = [
-      "/moeliker.webp",
-      "/visser.webp",
-      "/nsl-logo-square.webp",
-      "/khang.webp",
-      "/vogel.webp",
-      "/moeliker.jpeg",
-      "/visser.jpeg",
-      "/nsl-logo-square.png",
-      "/vogel.jpeg",
-      "/khang.jpeg",
+    const imageNames = [
+      "moeliker",
+      "visser",
+      "nsl-logo-square",
+      "khang",
+      "vogel",
+      "angelika",
+      "dgt-logo",
     ];
+    const imagesToPreload = imageNames.map((name) =>
+      browserUsesWebP
+        ? `/${name}.webp`
+        : name === "nsl-logo-square" || name === "dgt-logo"
+        ? `/${name}.png`
+        : `/${name}.jpeg`
+    );
+
     preloadImages(imagesToPreload);
-  }, []);
+  }, [browserUsesWebP]);
 
   const getImageSource = (imageName: string) => {
     if (browserUsesWebP) {

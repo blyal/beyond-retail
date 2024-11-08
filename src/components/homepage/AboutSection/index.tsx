@@ -42,9 +42,10 @@ const AboutSection = () => {
             satisfaction.
           </AboutBlock>
           <AboutBlock title="Global Consulting Experience">
-            I’ve worked with companies across multiple regions, always adapting
-            to ensure seamless collaboration. My flexible, remote setup allows
-            me to adapt to your needs, no matter where you’re located.
+            I’ve worked with companies across multiple regions internationally,
+            always adapting to ensure seamless collaboration. My flexible,
+            remote setup allows me to adapt to your needs, no matter where
+            you’re located.
           </AboutBlock>
         </div>
       </div>

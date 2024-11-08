@@ -41,8 +41,8 @@ const ReferralProgram = () => {
             Referral Incentive Program – Earn €450!
           </h1>
           <p className="text-xl mb-12 mobilePortrait:text-lg">
-            Refer someone for software development or consultancy services and
-            earn rewards!
+            Refer a company that needs software development or consultancy
+            services and earn rewards!
           </p>
         </div>
 
@@ -67,13 +67,12 @@ const ReferralProgram = () => {
           </h1>
 
           {/* Introduction */}
-          <p className="text-lg mb-8">
+          <p className="text-xl mb-8">
             Hi there! I’m excited to announce my Referral Incentive Program,
             designed to reward those who help me grow my freelance business. I
-            offer custom software development and consultancy services, focused
-            on designing and building high-quality web and mobile applications.
-            I’m currently looking to expand my client base—and that’s where you
-            come in!
+            design and build high-quality software, such as websites and mobile
+            applications. I’m currently looking to expand my client base—and
+            that’s where you come in!
           </p>
 
           <div className="flex justify-center my-12">
@@ -102,20 +101,25 @@ const ReferralProgram = () => {
 
           {/* How to Refer */}
           <h2 className="text-2xl font-semibold mb-4">🔗 How to refer:</h2>
-          <p className="text-xl mb-0">
-            It’s simple! Just send them my way by emailing me at{" "}
-            <a href="mailto:your-email@example.com" className="text-blue-500">
-              alex@beyonddevelopment.co
-            </a>
-          </p>
-          <p className="text-xl mb-8">
-            Alternatively, call or DM me directly via any of the contact
-            information listed in{" "}
-            <a href="#footer" className="text-cyan-600 hover:text-cyan-500">
-              the footer of this page
-            </a>
-            . If they become a client, you’ll get your reward.
-          </p>
+          <ul className="list-disc list-inside mb-8 text-xl">
+            <li>
+              It’s simple! Just send them my way by emailing me at{" "}
+              <a
+                href="mailto:alex@beyonddevelopment.co"
+                className="text-blue-500"
+              >
+                alex@beyonddevelopment.co
+              </a>
+            </li>
+            <li>
+              Alternatively, call or DM me directly via any of the contact
+              information listed in{" "}
+              <a href="#footer" className="text-cyan-600 hover:text-cyan-500">
+                the footer of this page
+              </a>
+              . If they become a client, you’ll get your reward.
+            </li>
+          </ul>
 
           {/* Incentive Details */}
           <h2 className="text-2xl font-semibold mb-4">

@@ -9,13 +9,16 @@ const ServicesSection = () => {
     >
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
-        src="/laptop-video.mp4"
         autoPlay
         loop
         muted
         playsInline
         preload="none"
-      />
+      >
+        <source src="/laptop-video.webm" type="video/webm" />
+        <source src="/laptop-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className="container mx-auto">
         <h2 className="text-3xl font-semibold text-white mb-4 drop-shadow-xl">
           Broad Expertise
