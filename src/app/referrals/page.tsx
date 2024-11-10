@@ -157,7 +157,7 @@ const ReferralProgram = () => {
               <li>
                 <a
                   className="text-blue-600 text-xl"
-                  href="/documents/terms-and-conditions_1.0.pdf"
+                  href="/documents/terms-and-conditions_1.1.pdf"
                   download
                 >
                   <span className="hover:underline">Download ⬇️</span>
