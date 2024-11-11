@@ -65,9 +65,10 @@ const Testimonial = ({
         <h4 className="font-semibold text-2xl bg-gradient-to-b from-[#e4f2a6] to-[#43c2e8] bg-clip-text text-transparent leading-[1]">
           {name}
         </h4>
-        <div className="font-robotoBold text-gray-300 leading-tight tracking-widest">
-          {position}{" "}
-          <span className="font-robotoLight text-white uppercase">
+        <div className="font-robotoBold text-gray-100 text-xl leading-tight tracking-normal">
+          {position}
+          <br />
+          <span className="font-robotoLight text-gray-400 text-base uppercase tracking-wide">
             {company}
           </span>
         </div>
