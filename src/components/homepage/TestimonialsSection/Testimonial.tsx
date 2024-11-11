@@ -41,6 +41,7 @@ const Testimonial = ({
             layout="fill"
             objectFit="cover"
             className="rounded-full bg-[#2a2b2a]"
+            priority
           />
         </div>
       </div>
