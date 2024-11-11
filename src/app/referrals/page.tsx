@@ -7,6 +7,7 @@ import Image from "next/image";
 import Modal from "../../components/modals/Modal";
 import ReferralTermsAndConditions from "./ReferralTermsAndConditions";
 import CTAButton from "@/components/buttons/CTAButton";
+import ProgramStatusBadge from "./ProgramStatusBadge";
 
 const ReferralProgram = () => {
   const [browserUsesWebP, setBrowserUsesWebP] = useState(true);
@@ -36,20 +37,21 @@ const ReferralProgram = () => {
       >
         <div className="absolute inset-0 bg-slate-950 opacity-80 z-0"></div>
         {/* Centered h1 and p */}
-        <div className="relative flex z-10 flex-col items-center justify-center">
+        <div className="relative mb-40 mobileLandscape:mb-4 flex z-10 flex-col items-center justify-center">
           <h1 className="text-5xl font-bold mb-6 mobilePortrait:text-3xl">
             Referral Incentive Program – Earn €450!
           </h1>
-          <p className="text-xl mb-12 mobilePortrait:text-lg">
+          <p className="text-xl mobilePortrait:text-lg">
             Refer a company that needs software development or consultancy
             services and earn rewards!
           </p>
         </div>
+        <ProgramStatusBadge />
 
         {/* Arrow Down Icon at 3/4 height */}
         <a
           href="#details-section"
-          className="absolute z-10 bottom-[15%] cursor-pointer"
+          className="absolute z-10 bottom-[10%] mobileLandscape:bottom-[5%] cursor-pointer"
         >
           <FaArrowDown size={40} />
         </a>
