@@ -92,8 +92,13 @@ const ReferralProgram = () => {
           <ul className="list-disc list-inside mb-8 text-xl">
             <li>
               Refer anyone who needs software development or consultancy
-              services. If they become a client, you’ll earn 10% of the total
-              project value, up to a maximum of €450.
+              services. If they become a client, you’ll earn{" "}
+              <strong>10% of the total project value</strong>, up to a maximum
+              of €450.
+            </li>
+            <li>
+              Referred clients will also receive a 5% first project discount
+              (independent of your reward).
             </li>
             <li>
               Once the client pays for the project, I’ll send your incentive
