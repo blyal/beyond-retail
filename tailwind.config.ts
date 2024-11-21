@@ -30,6 +30,7 @@ const config: Config = {
         robotoBold: ["Roboto-Bold", "sans-serif"],
         robotoBlack: ["Roboto-Black", "sans-serif"],
         calloveya: ["Calloveya", "Merriweather", "serif"],
+        nunito: ["Nunito", "sans-serif"],
       },
       letterSpacing: {
         "extra-widest": "0.4em",
