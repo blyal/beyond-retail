@@ -54,7 +54,7 @@ const Header = () => {
           <div
             className={`flex items-center transition-opacity duration-500 ${
               isAtTop ? "opacity-0" : "opacity-100"
-            } md:opacity-100`}
+            } xl:opacity-100`}
           >
             <Link href="/#home" onClick={() => setMenuOpen(false)}>
               <Image
@@ -88,7 +88,7 @@ const Header = () => {
             />
           </div>
 
-          <nav className="hidden md:flex space-x-6 bg-[#00070D] py-2 px-4 rounded-lg">
+          <nav className="hidden xl:flex space-x-4 bg-[#00070D] py-2 px-4 rounded-lg">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.name}
@@ -112,7 +112,7 @@ const Header = () => {
 
           {/* Mobile Burger Menu */}
           <div
-            className={`md:hidden p-3 bg-[#00070D] rounded-md flex transition-opacity duration-500 ${
+            className={`xl:hidden p-3 bg-[#00070D] rounded-md flex transition-opacity duration-500 ${
               isAtTop ? "opacity-0" : "opacity-100"
             }`}
           >

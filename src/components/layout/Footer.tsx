@@ -7,8 +7,8 @@ import CTAAnchor from "@/components/buttons/CTAAnchor";
 const Footer = () => {
   return (
     <footer id="footer" className="bg-gray-800 text-white pt-6 pb-6">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-center">
-        <div className="flex items-center justify-center md:justify-start flex-1 mb-4 md:mb-0">
+      <div className="container mx-auto flex flex-col xl:flex-row justify-between items-center">
+        <div className="hidden xl:flex items-center justify-center md:justify-start flex-1 mb-4">
           <Link href="/#home">
             <Image
               src="/logo.png"
@@ -20,7 +20,7 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div className="flex flex-1 justify-center items-center mb-8 md:mb-0">
+        <div className="hidden xl:flex flex-1 justify-center items-center mb-8">
           <div className="flex space-x-6">
             {NAV_LINKS.map((link) => (
               <Link
@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center md:justify-end flex-1 space-x-8 mb-4 md:mb-0">
+        <div className="flex items-center justify-center md:justify-end flex-1 space-x-8 mb-0">
           <a
             href="mailto:contact@beyonddevelopment.co"
             className="hover:text-gray-400"
