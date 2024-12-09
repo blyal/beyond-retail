@@ -11,13 +11,13 @@ const config: Config = {
       screens: {
         portrait: { raw: "(orientation: portrait)" },
         ipadPortrait: {
-          raw: "(min-width: 768px) and (max-width: 1024px) and (orientation: portrait)",
+          raw: "(min-width: 767px) and (max-width: 1024px) and (orientation: portrait)",
         },
         mobilePortrait: {
-          raw: "(max-width: 768px) and (orientation: portrait)",
+          raw: "(max-width: 767px) and (orientation: portrait)",
         },
         mobileLandscape: {
-          raw: "(max-width: 932px) and (orientation: landscape)",
+          raw: "(max-width: 933px) and (orientation: landscape)",
         },
       },
       colors: {

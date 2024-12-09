@@ -29,6 +29,9 @@ const Article = () => {
         />
       }
       sections={articleSections as ArticleSection[]}
+      upNextArticleTitle="How to Start Coding: The 2-Minute Guide for Complete Beginners"
+      upNextArticleImagePath="/screen-with-coffee.jpg"
+      upNextArticleHref="/articles/how-to-start-coding-the-two-minute-guide-for-complete-beginners"
     />
   );
 };

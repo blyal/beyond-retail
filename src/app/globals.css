@@ -94,6 +94,12 @@ body {
   font-weight: 200;
   font-style: normal;
 }
+@font-face {
+  font-family: "Nunito";
+  src: url("/fonts/nunito/Nunito-ExtraLightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
 
 @font-face {
   font-family: "Nunito";

@@ -61,7 +61,7 @@ export default function ArticlesHub() {
           <div className="flex lg:block lg:bg-gray-900 ">
             <div className="lg:hidden pr-4 text-xl opacity-75">2</div>
             <Link
-              href="/articles/the-ultimate-guide-to-becoming-a-software-engineer-from-scratch"
+              href="/articles/how-to-start-coding-the-two-minute-guide-for-complete-beginners"
               passHref
             >
               <div className="shadow-md overflow-hidden cursor-pointer">
