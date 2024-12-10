@@ -8,7 +8,7 @@ const Article = () => {
       category="Guides & Tutorials"
       title={"How to Start Coding: The 2-Minute Guide for Complete Beginners"}
       subtitle={
-        "Learning to code is easy, all you need is a computer and the internet. Knowing where to start is the hard part. Here’s the guide I wish I’d had when I began my journey as a developer."
+        "Here’s the guide I wish I’d had when I began my journey as a developer."
       }
       dateTime={"2024-12-06"}
       xShareLink={

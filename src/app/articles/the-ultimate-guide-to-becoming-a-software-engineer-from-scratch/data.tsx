@@ -37,9 +37,9 @@ export const articleSections = [
         type: "paragraph",
         content: (
           <>
-            So far, working in tech has pretty much just been made easier by the
-            arrival of AI, especially for developers. Although the hiring market
-            has its ups and downs, companies are still looking for devs.
+            So far, AI has largely made working in tech easier, particularly for
+            developers. Although the hiring market has its ups and downs,
+            companies are still looking for devs.
           </>
         ),
       },
@@ -55,9 +55,7 @@ export const articleSections = [
       },
       {
         type: "paragraph",
-        content: (
-          <>So for now, don’t worry about AI taking your job, and read on.</>
-        ),
+        content: <>So for now, don’t worry about AI taking your job—read on.</>,
       },
     ],
   },
@@ -71,9 +69,10 @@ export const articleSections = [
         type: "paragraph",
         content: (
           <>
-            It’s important to demystify the journey in your mind as much as
-            possible by having clarity on what the ultimate goal is: become an
-            employed software engineer.
+            It’s important to demystify the journey for yourself as much as
+            possible by clarifying the ultimate goal: become an employed
+            software engineer. Keeping your goal in mind will also help keep you
+            focused, and stop you from going on too many side-quests.
           </>
         ),
       },
@@ -81,12 +80,12 @@ export const articleSections = [
         type: "paragraph",
         content: (
           <>
-            Achieving <em>this</em> goal is the hard part. Afterwards, you’ll be
-            in a good position to continue your growth in whatever other
+            Achieving this particular goal is the hard part. Afterwards, you’ll
+            be in a good position to continue your growth in whatever other
             direction you then desire—either continuing to progress towards
             being a senior developer, or pivoting to an adjacent position such
             as project manager (where you will be at an advantage due to your
-            technical knowledge); or even starting your own business.
+            technical knowledge); or perhaps even starting your own business.
           </>
         ),
       },
@@ -104,7 +103,7 @@ export const articleSections = [
         type: "paragraph",
         content: (
           <>
-            To get employed, you will need{" "}
+            To get employed as a software engineer, you will need{" "}
             <span className="underline">four</span> things:
           </>
         ),
@@ -126,18 +125,38 @@ export const articleSections = [
         type: "paragraph",
         content: (
           <>
-            Of these four elements, I put{" "}
+            Of course, these aren&apos;t the only things you&apos;ll need. As
+            with almost all jobs, you&apos;ll need to be able to learn, adapt,
+            manage your time, cooperate, communicate, etc. Hopefully that
+            doesn&apos;t come as too much of a surprise ;)
+          </>
+        ),
+      },
+      {
+        type: "paragraph",
+        content: (
+          <>
+            Of the four requisite ingredients for employment in software
+            development, I put{" "}
             <strong className="font-bold">technical skills</strong> first for a
             reason. The great thing about software development is that the
             smartest companies know that having technical skills is the thing
             that really matters for a developer, compared to a formal education
-            or a strong CV game. That&apos;s why companies like Google are known
-            for hiring people who have never even been to university.
-            Personally, the most talented developer I know has never had any
-            formal programming education, but due to the value he brings to the
-            table, it matters not one bit to the company he works for. And, now
-            that he’s racked up some experience, his CV looks healthy anyway.
+            or a strong CV game.
           </>
+        ),
+      },
+      {
+        type: "paragraph",
+        content: (
+          <em>
+            note: That&apos;s why companies like Google are known for hiring
+            people who have never even been to university. Personally, the most
+            talented developer I know has never had any formal programming
+            education, but due to the value he brings to the table, it matters
+            not one bit to the company he works for. And, now that he’s racked
+            up some experience, his CV looks quite healthy anyway.
+          </em>
         ),
       },
       {
@@ -164,23 +183,30 @@ export const articleSections = [
         content: <>Get online and start learning to program.</>,
       },
       {
-        type: "unordered-list",
-        content: [
+        type: "paragraph",
+        content: (
           <>
             YouTube is your first port-of-call. Search up simple videos that
             explain what programming is, and how the tech industry works. Find
             out a bit about what different types of programming there are, so
             you can get a flavour for what kind of programmer you might want to
             be.
-          </>,
+          </>
+        ),
+      },
+      {
+        type: "unordered-list",
+        content: [
           <>
-            i.e. if you’re a more visual person, you might like to follow a
-            Front End Developer path, using HTML, JavaScript and CSS to
-            structure and style websites. Or, perhaps you’re a more logical and
-            mathematical person, who might be better suited to Data Analytics or
-            Back End Development. If you’re not sure yet, it doesn’t
-            matter—start somewhere. Your skills will still be useful if you
-            decide to switch later.
+            <em>
+              i.e. if you’re a more visual person, you might like to follow a
+              Front End Developer path, using HTML, JavaScript and CSS to
+              structure and style websites. Or, perhaps you’re a more logical
+              and mathematical person, who might be better suited to Data
+              Analytics or Back End Development. If you’re not sure yet, it
+              doesn’t matter—start somewhere. Your skills will still be useful
+              if you decide to switch later.
+            </em>
           </>,
         ],
       },
@@ -198,15 +224,18 @@ export const articleSections = [
         ),
       },
       {
-        type: "paragraph",
-        content: (
+        type: "unordered-list",
+        content: [
           <>
-            For example, if you’re looking into Front End Development, you will
-            come across the term ‘React’ at some point, which is not exactly a
-            coding language, and you’ll wonder, ‘what is React?’. ChatGPT can
-            explain that to you in simple terms, better than most humans could.
-          </>
-        ),
+            <em>
+              For example, if you’re looking into Front End Development, you
+              will come across the term ‘React’ at some point, which is not
+              exactly a coding language. You’ll wonder, ‘what is React?’.
+              ChatGPT can explain that to you in simple terms, better than most
+              humans could.
+            </em>
+          </>,
+        ],
       },
       {
         type: "paragraph",
@@ -230,10 +259,10 @@ export const articleSections = [
           <>
             You can move around on Codecademy’s different courses and get a feel
             for different languages and types of programming if you like. But
-            you’ll need to eventually pick a language to go deeper on.
+            you’ll eventually need to pick a language to go deeper on.
           </>,
           <>
-            If you’re really not sure, you can ask ChatGPT for advice. Perhaps
+            If you’re not really sure, you can ask ChatGPT for advice. Perhaps
             go with one of the most popular and employable coding languages that
             are also good for beginners. JavaScript or Java are fine options.
           </>,
@@ -323,9 +352,9 @@ export const articleSections = [
         type: "paragraph",
         content: (
           <>
-            Find the most prestigious institution you can, that is also
-            affordable for you—a university, a technical college, a boot camp,
-            some kind of accredited online coding program. <em>Something.</em>
+            Find the most reputable institution that&apos;s in your budget—a
+            university, a technical college, a boot camp, some kind of
+            accredited online coding program. <em>Something.</em>
           </>
         ),
       },
@@ -348,7 +377,7 @@ export const articleSections = [
         type: "unordered-list",
         content: [
           <>
-            Meeting other people who are on the same journey as you. You can
+            Meeting other people who are on the same journey, where you can
             compete, collaborate, and inspire each other on.
           </>,
           <>
@@ -426,7 +455,7 @@ export const articleSections = [
         content: (
           <>
             I don’t want to give too much CV-building advice. There’s countless
-            resources online for that. I would only add, keep it relatively
+            resources online for that. I would only suggest, keep it relatively
             short, and cut the irrelevant stuff that tech companies will be
             uninterested in. If, for example, you have a philosophy degree or
             worked as a hotel manager, you might include those as they suggest
@@ -447,8 +476,9 @@ export const articleSections = [
             taken. Find and add any contacts you have on LinkedIn. Add any of
             your past skills and awards to your page, as well as your newfound
             coding skills. Use LinkedIn’s free month of Premium and do a few
-            LinkedIn coding courses, which you can display on your profile.
-            Having a good LinkedIn profile is underrated.
+            coding courses on their education platform, which will land you some
+            certificates that you can directly display on your profile. Having a
+            good LinkedIn profile is underrated.
           </>
         ),
       },
@@ -583,7 +613,7 @@ export const articleSections = [
         type: "paragraph",
         content: (
           <>
-            And, one day, suddenly, you will realise that: you{" "}
+            And, one day, you will suddenly realise: you{" "}
             <span className="underline">are</span> a software developer, and you
             have skills that make you valuable to people. That&apos;s when the
             real work begins ;)

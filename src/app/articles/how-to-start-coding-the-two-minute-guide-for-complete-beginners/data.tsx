@@ -24,11 +24,25 @@ export const articleSections = [
   {
     sectionBlocks: [
       {
+        type: "paragraph",
+        content: (
+          <>
+            Learning to code is easy—all you need is a computer and the
+            internet. The hard part is knowing where to start. This article will
+            help you get the ball rolling.
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    sectionBlocks: [
+      {
         type: "header",
         content: (
           <>
-            First step: orient yourself – using YouTube, ChatGPT & talking to
-            others
+            First step: orient yourself – with YouTube, ChatGPT & talking to
+            others.
           </>
         ),
       },
@@ -36,8 +50,8 @@ export const articleSections = [
         type: "paragraph",
         content: (
           <>
-            First thing’s first, you need an introductory knowledge of coding
-            and of the IT industry.{" "}
+            First thing’s first, you need a basic understanding of coding and of
+            the IT industry.{" "}
             <strong className="font-bold">
               Watch some YouTube videos aimed at beginners
             </strong>
@@ -53,7 +67,7 @@ export const articleSections = [
             <em className="font-extralight">
               Some suggestions to get you started: videos about the history of
               programming; about popular programming languages; about different
-              kinds of coding (e.g. frontend vs backend); about how the IT world
+              kinds of coding (e.g. frontend vs backend); how the IT world
               works; and what it’s like to work as a developer.
             </em>
           </>
@@ -65,7 +79,7 @@ export const articleSections = [
           <>
             Make a <strong className="font-bold">ChatGPT</strong> or{" "}
             <strong className="font-bold">Grok</strong> account if you don’t
-            have one, and ask it questions that you have and that arise over
+            have one, and ask it questions that you have, and that arise over
             time. Tell it to tailor its answers to an entry-level learner.
           </>
         ),
@@ -79,9 +93,10 @@ export const articleSections = [
               developers, or people with a connection to the IT world, send them
               a message
             </strong>{" "}
-            or email, to tell them your plans to start coding. Ask them some
-            questions, or if they would be free for a call or a coffee. These
-            talks will give you more of a feel for what the world of IT is like.
+            or email. Tell them about your plans to start coding. Ask them some
+            questions, or if they would be free for a call or a coffee. Talking
+            with them will give you more of a feel for what the world of IT is
+            like.
           </>
         ),
       },
@@ -91,15 +106,13 @@ export const articleSections = [
     sectionBlocks: [
       {
         type: "header",
-        content: (
-          <>Second Step: Learn what it feels like to code with Codecademy</>
-        ),
+        content: <>Second step: learn what it feels like to code.</>,
       },
       {
         type: "paragraph",
         content: (
           <>
-            Next, you need to get a feel of what coding is actually like.{" "}
+            You need to get a feel of what coding is actually like.{" "}
             <a
               href="https://www.codecademy.com/"
               target="_blank"
@@ -107,8 +120,8 @@ export const articleSections = [
             >
               <span className="hover:underline text-cyan-400">Codecademy</span>
             </a>{" "}
-            is a learning platform which teaches people to write code in a
-            highly guided manner.
+            is a learning platform which teaches people to write code in a very
+            guided way.
           </>
         ),
       },
@@ -128,14 +141,14 @@ export const articleSections = [
     sectionBlocks: [
       {
         type: "header",
-        content: <>Next up: Write code in your own environment!</>,
+        content: <>Next up: write code in your own environment!</>,
       },
       {
         type: "paragraph",
         content: (
           <>
-            <strong className="font-bold">Download an IDE</strong> - an
-            application-platform where developers write code.{" "}
+            <strong className="font-bold">Download an IDE</strong>—a platform
+            where developers write code.{" "}
             <a
               href="https://code.visualstudio.com/"
               target="_blank"
@@ -145,7 +158,7 @@ export const articleSections = [
                 Visual Studio Code
               </span>
             </a>{" "}
-            is a widely-used free option.
+            is a free and widely-used option.
           </>
         ),
       },
@@ -156,8 +169,8 @@ export const articleSections = [
             <strong className="font-bold">Then go back to YouTube</strong> and
             find a guided coding tutorial, so you can follow along and make a
             small app. This will be quite a step forward, as you will be
-            creating and running software yourself, which for many people feels
-            very satisfying.
+            creating and running software yourself, which may feel quite
+            satisfying.
           </>
         ),
       },
@@ -172,24 +185,28 @@ export const articleSections = [
       {
         type: "unordered-list",
         content: [
-          <a
-            href="https://www.youtube.com/@TraversyMedia"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <em className="font-extralight text-cyan-400 hover:underline">
-              Traversy Media
-            </em>
-          </a>,
-          <a
-            href="https://www.youtube.com/@programmingwithmosh"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <em className="font-extralight text-cyan-400 hover:underline">
-              Programming with Mosh
-            </em>
-          </a>,
+          <>
+            <a
+              href="https://www.youtube.com/@TraversyMedia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <em className="font-extralight text-cyan-400 hover:underline">
+                Traversy Media
+              </em>
+            </a>
+          </>,
+          <>
+            <a
+              href="https://www.youtube.com/@programmingwithmosh"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <em className="font-extralight text-cyan-400 hover:underline">
+                Programming with Mosh
+              </em>
+            </a>
+          </>,
         ],
       },
     ],
@@ -198,7 +215,7 @@ export const articleSections = [
     sectionBlocks: [
       {
         type: "header",
-        content: <>Finally: level up by joining a video learning platform</>,
+        content: <>Finally: level up by joining a video learning platform...</>,
       },
       {
         type: "paragraph",
@@ -231,23 +248,23 @@ export const articleSections = [
         type: "paragraph",
         content: (
           <>
-            On that note, at this point you should have enough information to be
-            able to pick a particular area of software development (and a main
-            language or technology) to initially focus on. Your chosen area
-            could be one that aligns with your interests, talents, or career
-            goals. If you feel unsure, don’t worry and just pick a popular
-            language to go with (JavaScript or Java will do). If you decide to
-            pivot to something else later, it’s not a problem because most
-            coding languages have a lot in common.
+            By now, you should have enough information to be able to pick a
+            particular area of software development (and a main language or
+            technology) to initially focus on. Your chosen area could be one
+            that aligns with your interests, talents, or career goals. If you
+            feel unsure, don’t worry and just pick a popular language to go with
+            (JavaScript or Java will do). If you decide to pivot to something
+            else later, it’s not a problem because most coding languages have a
+            lot in common.
           </>
         ),
       },
       {
         type: "paragraph",
         content: (
-          <>
-            You will find many good places to learn to code online besides the
-            resources I’ve mentioned, other video platforms, and much more (
+          <em>
+            n.b. There are many fine places that teach coding online besides the
+            resources I’ve mentioned, other video platforms and much more (
             <a
               href="https://www.coursera.org/"
               target="_blank"
@@ -266,7 +283,7 @@ export const articleSections = [
               </span>
             </a>
             , etc.).
-          </>
+          </em>
         ),
       },
     ],
@@ -277,8 +294,8 @@ export const articleSections = [
         type: "header",
         content: (
           <>
-            Moving on: as soon as you feel confident enough, join a learning
-            institution or company.
+            Moving on: as soon as you are able to, join a learning institution
+            or company, preferably in-person.
           </>
         ),
       },
@@ -300,8 +317,8 @@ export const articleSections = [
             Register with a coding school, bootcamp, or university. Or else find
             companies who will let you in the door to get unpaid (or paid!) work
             experience. On the job is where the real learning happens. Start
-            building that resume, collecting those references, and building the
-            foundations of your future.
+            building that resume, collecting references, and laying the
+            foundation for your career in IT.
           </>
         ),
       },
