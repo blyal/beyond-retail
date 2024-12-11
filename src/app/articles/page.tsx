@@ -31,7 +31,7 @@ export default function ArticlesHub() {
                   scratch.
                 </h2>
                 <p className="opacity-60 text-xs lg:text-base">
-                  Alex Blyth | Nov 21, 2024
+                  Alex Blyth | Nov 30, 2024
                 </p>
               </div>
               {/* <Image
@@ -91,7 +91,7 @@ export default function ArticlesHub() {
                     Beginners
                   </h3>
                   <p className="text-xs lg:text-sm text-gray-500 mb-2">
-                    Dec 1, 2024
+                    Dec 12, 2024
                   </p>
                 </div>
               </div>

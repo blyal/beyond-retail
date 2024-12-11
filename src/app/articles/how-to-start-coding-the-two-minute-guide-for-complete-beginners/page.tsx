@@ -10,7 +10,7 @@ const Article = () => {
       subtitle={
         "Here’s the guide I wish I’d had when I began my journey as a developer."
       }
-      dateTime={"2024-12-06"}
+      dateTime={"2024-12-12"}
       xShareLink={
         "https://x.com/intent/tweet?text=How%20To%20Start%20Coding:%20The%202-Minute%20Guide%20for%20Complete%20Beginners&url=https://www.beyonddevelopment.co/articles/how-to-start-coding-the-two-minute-guide-for-complete-beginners"
       }

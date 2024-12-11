@@ -12,7 +12,7 @@ const Article = () => {
       subtitle={
         "Programming is a pathway to a lifetime of opportunity, in the tech industry and beyond."
       }
-      dateTime={"2024-11-21"}
+      dateTime={"2024-11-30"}
       xShareLink={
         "https://x.com/intent/tweet?text=The%20Ultimate%20Guide%20to%20Becoming%20a%20Software%20Engineer,%20from%20scratch&url=https://www.beyonddevelopment.co/articles/the-ultimate-guide-to-becoming-a-software-engineer-from-scratch"
       }
