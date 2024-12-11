@@ -136,10 +136,9 @@ export const articleSections = [
         type: "paragraph",
         content: (
           <>
-            Of the four requisite ingredients for employment in software
-            development, I put{" "}
-            <strong className="font-bold">technical skills</strong> first for a
-            reason. The great thing about software development is that the
+            Of those four ingredients for employment in software development, I
+            put <strong className="font-bold">technical skills</strong> first
+            for a reason. The great thing about software development is that the
             smartest companies know that having technical skills is the thing
             that really matters for a developer, compared to a formal education
             or a strong CV game.
@@ -199,13 +198,13 @@ export const articleSections = [
         content: [
           <>
             <em>
-              i.e. if you’re a more visual person, you might like to follow a
-              Front End Developer path, using HTML, JavaScript and CSS to
-              structure and style websites. Or, perhaps you’re a more logical
-              and mathematical person, who might be better suited to Data
-              Analytics or Back End Development. If you’re not sure yet, it
-              doesn’t matter—start somewhere. Your skills will still be useful
-              if you decide to switch later.
+              i.e. if you’re a more visual person, you might be well-suited to
+              Front End Development, using HTML, JavaScript and CSS to structure
+              and style websites. Or, perhaps you’re a more logical and
+              mathematical person, who might be better-suited to Data Analytics
+              or Back End Development. If you’re not sure yet, it doesn’t
+              matter—start somewhere. Your skills will still be useful if you
+              decide to switch later.
             </em>
           </>,
         ],
@@ -244,7 +243,14 @@ export const articleSections = [
             {" "}
             Once you’re ready to start programming yourself, I would consider
             starting with a service like{" "}
-            <strong className="font-bold">Codecademy</strong>.
+            <a
+              href="https://www.codecademy.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="hover:underline text-cyan-400">Codecademy</span>
+            </a>
+            .
           </>
         ),
       },
@@ -263,8 +269,9 @@ export const articleSections = [
           </>,
           <>
             If you’re not really sure, you can ask ChatGPT for advice. Perhaps
-            go with one of the most popular and employable coding languages that
-            are also good for beginners. JavaScript or Java are fine options.
+            go with one of the more popular and employable coding languages
+            which is also beginner-friendly. JavaScript or Java are fine
+            options.
           </>,
         ],
       },
@@ -282,8 +289,26 @@ export const articleSections = [
         type: "unordered-list",
         content: [
           <>
-            Traversy Media and Programming with Mosh are some well-known
-            channels which produce such videos.
+            <a
+              href="https://www.youtube.com/@TraversyMedia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="text-cyan-400 hover:underline">
+                Traversy Media
+              </span>
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://www.youtube.com/@programmingwithmosh"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="text-cyan-400 hover:underline">
+                Programming with Mosh
+              </span>
+            </a>{" "}
+            are some well-known channels which produce such videos.
           </>,
           <>
             At this point you’ll probably want to download an{" "}
@@ -293,12 +318,18 @@ export const articleSections = [
           </>,
           <>
             You’ll also want to create a{" "}
-            <strong className="font-bold">GitHub</strong> account—kind of like
-            the Instagram or Pinterest for developers, but instead of photos,
-            people post their code (and also save their code history—so it has a
-            practical purpose as well). Trust me, a GitHub account will be very
-            useful for your goal of getting employed, and the sooner you have
-            one, the better.
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="text-cyan-400 hover:underline">GitHub</span>
+            </a>{" "}
+            account—kind of like the Instagram or Pinterest for developers, but
+            instead of photos, people post their code (and also save their code
+            history—so it has a practical purpose as well). Trust me, a GitHub
+            account will be very useful for your goal of getting employed, and
+            the sooner you have one, the better.
           </>,
         ],
       },
@@ -308,8 +339,22 @@ export const articleSections = [
           <>
             After doing tutorials on YouTube for a while, I recommend to get a
             paid subscription to{" "}
-            <strong className="font-bold">PluralSight</strong> (or,
-            alternatively, <strong className="font-bold">Udemy</strong>).
+            <a
+              href="https://www.pluralsight.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="hover:underline text-cyan-400">PluralSight</span>
+            </a>{" "}
+            (or, alternatively,{" "}
+            <a
+              href="https://www.udemy.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="hover:underline text-cyan-400">Udemy</span>
+            </a>
+            ).
           </>
         ),
       },
@@ -377,7 +422,7 @@ export const articleSections = [
         type: "unordered-list",
         content: [
           <>
-            Meeting other people who are on the same journey, where you can
+            Meeting other people who are on the same journey, with whom you can
             compete, collaborate, and inspire each other on.
           </>,
           <>
@@ -446,7 +491,7 @@ export const articleSections = [
         content: (
           <>
             In order to get a job, you will need to apply to jobs. To apply to
-            jobs, you will need a CV, and a LinkedIn page as well.
+            jobs, you will need a CV, and probably a LinkedIn page as well.
           </>
         ),
       },
@@ -486,15 +531,15 @@ export const articleSections = [
         type: "paragraph",
         content: (
           <>
-            The main challenge with your CV/LinkedIn is that it is needed for
+            The main challenge with your CV/LinkedIn is that they are needed for
             applying for jobs, but before you’ve had a (relevant) job,
             there&apos;s not much to include on them. This is where the
             accreditation comes in handy, as it is something to include.
             Furthermore, many accreditation programs will allow you the chance
             to build an app as part of a team, sometimes for an external
-            company, which is kind of like an unpaid job or internship. It’s
-            something to include on a CV, and it could be a leg-up into the
-            professional world.
+            company, which is kind of like an unpaid job or internship. It’s a
+            good start CV-wise, and could be a leg-up into the professional
+            world.
           </>
         ),
       },
@@ -597,15 +642,22 @@ export const articleSections = [
         content: (
           <>
             You may feel a bit out of your depth at first, but this is where
-            your <em>real</em> education begins. In software engineering, as
-            with many jobs, education is great, but the majority of skills are
-            learned on the job. If you commit to this first job, knowing you
-            will be far from perfect, but just keep showing up, over time you
-            will watch yourself improving. You will gradually understand more,
-            know what to do in more situations, participate in successful
-            projects, create working software that companies actually use to run
-            their business. Your managers will also watch you improving,
-            slowly-but-surely.
+            your <em>real</em> education begins.
+          </>
+        ),
+      },
+      {
+        type: "paragraph",
+        content: (
+          <>
+            In software engineering, as with many jobs, formal education is
+            great, but the majority of skills are learned on the job. If you
+            commit to this first job, knowing you will be far from perfect, but
+            just keep showing up, over time you will watch yourself improving.
+            You will gradually understand more, know what to do in more
+            situations, participate in successful projects, create working
+            software that companies actually use to run their business. Your
+            managers will also see you improving, slowly-but-surely.
           </>
         ),
       },

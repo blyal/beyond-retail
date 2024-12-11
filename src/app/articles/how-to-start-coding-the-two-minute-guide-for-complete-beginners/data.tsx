@@ -66,9 +66,9 @@ export const articleSections = [
           <>
             <em className="font-extralight">
               Some suggestions to get you started: videos about the history of
-              programming; about popular programming languages; about different
-              kinds of coding (e.g. frontend vs backend); how the IT world
-              works; and what it’s like to work as a developer.
+              programming; popular programming languages; different kinds of
+              coding (e.g. frontend vs backend); how the IT world works; and
+              what it’s like to work as a developer.
             </em>
           </>
         ),
@@ -120,8 +120,8 @@ export const articleSections = [
             >
               <span className="hover:underline text-cyan-400">Codecademy</span>
             </a>{" "}
-            is a learning platform which teaches people to write code in a very
-            guided way.
+            is a good option there. It&apos;s a learning platform which teaches
+            people to write code in a guided way.
           </>
         ),
       },
