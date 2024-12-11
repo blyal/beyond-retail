@@ -18,13 +18,16 @@ const Article = () => {
         "https://www.linkedin.com/sharing/share-offsite/?url=https://www.beyonddevelopment.co/articles/how-to-start-coding-the-two-minute-guide-for-complete-beginners"
       }
       featuredImage={
-        <Image
-          src="/screen-with-coffee.jpg"
-          alt="Article Image"
-          width={800}
-          height={502}
-          className="w-full object-cover rounded-md"
-        />
+        <picture>
+          <source srcSet="/screen-with-coffee.webp" type="image/webp" />
+          <Image
+            src="/screen-with-coffee.jpg"
+            alt="Article Image"
+            width={800}
+            height={502}
+            className="w-full object-cover rounded-md"
+          />
+        </picture>
       }
       sections={articleSections as ArticleSection[]}
       upNextArticleTitle="The Ultimate Guide to Becoming a Software Engineer, from scratch."

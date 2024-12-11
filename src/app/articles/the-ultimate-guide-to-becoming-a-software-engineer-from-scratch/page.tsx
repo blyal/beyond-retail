@@ -20,13 +20,16 @@ const Article = () => {
         "https://www.linkedin.com/sharing/share-offsite/?url=https://www.beyonddevelopment.co/articles/the-ultimate-guide-to-becoming-a-software-engineer-from-scratch"
       }
       featuredImage={
-        <Image
-          src="/code-doorway.png"
-          alt="A Doorway Made of Software Code"
-          width={800}
-          height={600}
-          className="w-full object-cover rounded-md"
-        />
+        <picture>
+          <source srcSet="/code-doorway.webp" type="image/webp" />
+          <Image
+            src="/code-doorway.png"
+            alt="A Doorway Made of Software Code"
+            width={800}
+            height={600}
+            className="w-full object-cover rounded-md"
+          />
+        </picture>
       }
       sections={articleSections as ArticleSection[]}
       upNextArticleTitle="How to Start Coding: The 2-Minute Guide for Complete Beginners"
