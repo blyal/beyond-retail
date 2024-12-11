@@ -131,27 +131,29 @@ const ArticlePage = ({
           })}
         </article>
       </div>
-      <div className="flex justify-between bg-gray-900 w-full h-[5rem] md:hidden border-t border-gray-500 px-5 py-4">
-        <div className="w-[80%] h-[100%] flex gap-4 text-sm">
-          <div className="relative h-[100%] w-[50%] max-w-[5rem]">
-            <Image
-              src={upNextArticleImagePath}
-              alt="Up Next Article Image"
-              fill
-              // width={300}
-              // height={100}
-              className="w-full object-cover object-center"
-            />
+      <Link href={upNextArticleHref}>
+        <div className="flex justify-between bg-gray-900 w-full h-[5rem] md:hidden border-t border-gray-500 px-5 py-4">
+          <div className="w-[80%] h-[100%] flex gap-4 text-sm">
+            <div className="relative h-[100%] w-[50%] max-w-[5rem]">
+              <Image
+                src={upNextArticleImagePath}
+                alt="Up Next Article Image"
+                fill
+                // width={300}
+                // height={100}
+                className="w-full object-cover object-center"
+              />
+            </div>
+            <div className="flex flex-col justify-center">
+              <p className="font-thin">Read Next</p>
+              <p className="line-clamp-1 font-bold">{upNextArticleTitle}</p>
+            </div>
           </div>
           <div className="flex flex-col justify-center">
-            <p className="font-thin">Read Next</p>
-            <p className="line-clamp-1 font-bold">{upNextArticleTitle}</p>
+            <IoArrowForward className="text-gray-200 scale-[1.5]" />
           </div>
         </div>
-        <div className="flex flex-col justify-center">
-          <IoArrowForward className="text-gray-200 scale-[1.5]" />
-        </div>
-      </div>
+      </Link>
       <div className="hidden bg-black px-24 mobileLandscape:px-32 xl:px-60 md:grid grid-cols-3 gap-x-8 h-48 relative">
         <div className="col-span-1 h-48 relative">
           <Link href={upNextArticleHref}>
