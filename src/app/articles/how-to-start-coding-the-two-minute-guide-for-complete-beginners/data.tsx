@@ -318,7 +318,7 @@ export const articleSections = [
             companies who will let you in the door to get unpaid (or paid!) work
             experience. On the job is where the real learning happens. Start
             building that resume, collecting references, and laying the
-            foundation for your career in IT.
+            foundations for your career in IT.
           </>
         ),
       },

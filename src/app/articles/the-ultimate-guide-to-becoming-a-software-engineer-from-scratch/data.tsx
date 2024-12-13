@@ -203,7 +203,7 @@ export const articleSections = [
               and style websites. Or, perhaps you’re a more logical and
               mathematical person, who might be better-suited to Data Analytics
               or Back End Development. If you’re not sure yet, it doesn’t
-              matter—start somewhere. Your skills will still be useful if you
+              matter—start somewhere. What you learn will still be useful if you
               decide to switch later.
             </em>
           </>,
@@ -217,8 +217,8 @@ export const articleSections = [
             <strong className="font-bold">ChatGPT</strong> or{" "}
             <strong className="font-bold">Grok</strong> account, now is the time
             to make one. It will be your new best friend on your programming
-            journey. Ask it lots of questions, and ask it to adjust the
-            simplicity of its answers to your current learning level.
+            journey. Ask it lots of questions, and to adjust the simplicity of
+            its answers to your current learning level.
           </>
         ),
       },
@@ -269,8 +269,8 @@ export const articleSections = [
           </>,
           <>
             If you’re not really sure, you can ask ChatGPT for advice. Perhaps
-            go with one of the more popular and employable coding languages
-            which is also beginner-friendly. JavaScript or Java are fine
+            go with one of the more popular and employable coding languages, and
+            one that is also beginner-friendly. JavaScript or Java are fine
             options.
           </>,
         ],
@@ -367,8 +367,8 @@ export const articleSections = [
             couple of small projects will be a big step forward. Those projects
             can later be shown in job interviews, and are concrete proof that
             you can make something—including to yourself. …which should not be
-            taken lightly, as for many of us, those early days of trying to get
-            our skills off the ground can be confusing and frustrating.
+            taken lightly. For many of us, those early days of trying to get
+            your skills off the ground can be confusing and frustrating.
           </>,
           <>
             Don’t worry if things still seem intimidating at this point—you’re
@@ -423,7 +423,7 @@ export const articleSections = [
         content: [
           <>
             Meeting other people who are on the same journey, with whom you can
-            compete, collaborate, and inspire each other on.
+            compete, collaborate, and together, inspire each other on.
           </>,
           <>
             You might be lucky and have a good mentor or teacher, even one that
@@ -471,10 +471,9 @@ export const articleSections = [
             participating in a boot camp.
           </>,
           <>
-            So, the answer: choose the accreditation program first which matches
-            your budget of time and money, and then keep doing more
-            accreditations until you find employment (which, remember, is your
-            goal).
+            So, the answer: choose the accreditation program which matches your
+            budget of time and money, and then keep doing more accreditations
+            until you find employment (which, remember, is your goal).
           </>,
         ],
       },
@@ -651,13 +650,13 @@ export const articleSections = [
         content: (
           <>
             In software engineering, as with many jobs, formal education is
-            great, but the majority of skills are learned on the job. If you
-            commit to this first job, knowing you will be far from perfect, but
-            just keep showing up, over time you will watch yourself improving.
-            You will gradually understand more, know what to do in more
-            situations, participate in successful projects, create working
-            software that companies actually use to run their business. Your
-            managers will also see you improving, slowly-but-surely.
+            great, but many of the most important skills can only be learned on
+            the job. If you commit to this first job, knowing you will be far
+            from perfect, but just keep showing up, over time you will watch
+            yourself improving. You will gradually understand more, know what to
+            do in more situations, participate in successful projects, create
+            working software that companies actually use to run their business.
+            Your managers will also see you improving, slowly-but-surely.
           </>
         ),
       },
