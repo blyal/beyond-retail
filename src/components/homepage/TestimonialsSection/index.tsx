@@ -121,6 +121,13 @@ const TestimonialsSection = () => {
             image={getImageSource("dgt-logo")}
           />
           <Testimonial
+            quote="Mr Blyth possesses comprehensive as well as wide-ranging specialist knowledge, even in peripheral fields, and which he was always able to apply confidently and skilfully in practice."
+            name="Jan Schumacher"
+            position="Senior Lead IT Architect"
+            company="MaibornWolff GmbH"
+            image={getImageSource("jan")}
+          />
+          <Testimonial
             quote="He especially impressed me with his ability to take ownership and drive the implementation of complex features from beginning to end."
             name="Paul Visser"
             position="Head of Engineering"
