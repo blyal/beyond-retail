@@ -505,8 +505,10 @@ export const articleSections = [
             worked as a hotel manager, you might include those as they suggest
             good qualities such as analytical thinking and responsibility. But,
             if you worked for a year as an Uber driver, consider excluding that.
-            A CV is a cultivated self-presentation to employees. If you judge
-            something to be unhelpful, you don’t have to include it.
+            No disrespect at all to Uber drivers, but a CV is a cultivated
+            self-presentation to potential employers in specific fields. They
+            don&apos;t need your life story, they need to know why they should
+            hire you for this job over the next guy.
           </>
         ),
       },
