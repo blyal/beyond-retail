@@ -6,6 +6,7 @@ import "./globals.css";
 import { ModalProvider } from "@/contexts/ContactModalContext";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
+import { NextWebVitalsMetric } from "next/app";
 
 export const metadata: Metadata = {
   title: "Alex Blyth | Beyond",
@@ -53,4 +54,9 @@ export default function RootLayout({
       </body>
     </html>
   );
+}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function reportWebVitals(metric: NextWebVitalsMetric): void {
+  // Disables Vercel comments
 }
