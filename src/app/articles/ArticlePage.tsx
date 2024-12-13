@@ -48,9 +48,9 @@ const ArticlePage = ({
 
   return (
     <div className="bg-gradient-to-b from-gray-900 to-blue-950 pt-36 mobileLandscape:pt-24 text-grey-100">
-      <div className="max-w-4xl mx-auto p-6 ipadPortrait:px-28 mobilePortrait:px-8 mobileLandscape:px-12">
+      <div className="max-w-4xl mx-auto p-6 ipadPortrait:px-14 mobilePortrait:px-8 mobileLandscape:px-12">
         {/* Section: Title and Meta */}
-        <div className="text-left lg:text-center">
+        <div className="text-left md:text-center">
           <p className="text-cyan-500 uppercase text-sm font-bold mb-5">
             {category}
           </p>
@@ -62,7 +62,7 @@ const ArticlePage = ({
           </p>
 
           {/* Meta Info */}
-          <div className="text-gray-100 text-base flex mobilePortrait:flex-col items-start lg:justify-center font-light font-nunito lg:items-center gap-2 mobilePortrait:gap-1 mb-5 ">
+          <div className="text-gray-100 text-base flex mobilePortrait:flex-col items-start md:justify-center font-light font-nunito md:items-center gap-2 mobilePortrait:gap-1 mb-5 ">
             <span className="text-cyan-400 font-bold">By Alex Blyth</span>
             <span className="mobilePortrait:hidden">&bull;</span>
             <div className="flex gap-2">
