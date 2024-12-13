@@ -28,6 +28,7 @@ const Article = () => {
             width={800}
             height={600}
             className="w-full object-cover rounded-md"
+            priority
           />
         </picture>
       }
