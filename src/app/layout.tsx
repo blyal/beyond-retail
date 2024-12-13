@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import "./globals.css";
 import { ModalProvider } from "@/contexts/ContactModalContext";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Alex Blyth | Beyond",
@@ -17,6 +18,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isProduction = process.env.NODE_ENV === "production";
   return (
     <html lang="en">
       <Head>
@@ -47,6 +49,7 @@ export default function RootLayout({
         </ModalProvider>
         <main>{children}</main>
         <Footer />
+        {isProduction && <Analytics />}
       </body>
     </html>
   );
