@@ -27,6 +27,7 @@ const Article = () => {
             height={502}
             className="w-full object-cover rounded-md"
             priority
+            loading="eager"
           />
         </picture>
       }
