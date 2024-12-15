@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 
 export default function ArticlesHub() {
@@ -34,29 +34,22 @@ export default function ArticlesHub() {
                   Alex Blyth | Nov 30, 2024
                 </p>
               </div>
-              {/* <Image
-                src="/code-doorway.png"
-                alt="Featured Article"
-                width={1000}
-                height={600}
-                className="w-full h-80 object-cover col-span-2 "
-              /> */}
               <div className="w-full h-32 lg:h-80 col-span-2 mt-3 lg:m-0">
-                {/* <picture>
+                <picture>
                   <source srcSet="/code-doorway.webp" type="image/webp" />
                   <img
                     src="/code-doorway.png"
                     alt="Featured Article Image"
                     className=" mx-auto w-full h-full object-cover rounded-md lg:rounded-none"
                   />
-                </picture>{" "} */}
-                <Image
+                </picture>{" "}
+                {/* <Image
                   src="/code-doorway.png"
                   alt="Featured Article"
                   width={1000}
                   height={600}
                   className="mx-auto w-full h-full object-cover rounded-md lg:rounded-none"
-                />
+                /> */}
               </div>
             </div>
           </Link>
