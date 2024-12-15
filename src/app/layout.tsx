@@ -20,6 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const isProduction = process.env.NODE_ENV === "production";
+  console.log({ isProduction });
+  console.log("vercel production", process.env.NEXT_PUBLIC_VERCEL_ENV);
   return (
     <html lang="en">
       <Head>
