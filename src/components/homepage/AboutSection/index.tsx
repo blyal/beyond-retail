@@ -17,7 +17,7 @@ const AboutSection = () => {
         >
           Alex Blyth
         </h1>
-        <h2 className="uppercase tracking-extra-widest font-light">
+        <h2 className="uppercase tracking-extra-widest text-gray-100 font-light">
           Beyond Development
         </h2>
       </div>

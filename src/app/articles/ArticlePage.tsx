@@ -54,10 +54,10 @@ const ArticlePage = ({
           <p className="text-cyan-500 uppercase text-sm font-bold mb-5">
             {category}
           </p>
-          <h1 className="text-5xl mobilePortrait:text-4xl font-light leading-[1.15] mb-5 font-nunito">
+          <h1 className="text-5xl mobilePortrait:text-4xl font-light leading-[1.15] mb-5 font-nunito text-gray-100 ">
             {title}
           </h1>
-          <p className="text-base font-bold mb-5 font-nunito leading-relaxed">
+          <p className="text-base font-bold mb-5 font-nunito text-gray-100 leading-relaxed">
             {subtitle}
           </p>
 
@@ -171,7 +171,7 @@ const ArticlePage = ({
               <p className="uppercase text-cyan-500 tracking-widest text-[0.8rem] font-extralight">
                 Up Next
               </p>
-              <h3 className="text-2xl font-extrabold leading-tight line-clamp-2">
+              <h3 className="text-2xl font-extrabold text-gray-100 leading-tight line-clamp-2">
                 {upNextArticleTitle}
               </h3>
               <p className="text-[0.9rem] text-gray-300 font-light opacity-75">
