@@ -14,11 +14,6 @@
   }
 }
 
-/* Hide Vercel toolbar */
-#__vercel {
-  display: none !important;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;

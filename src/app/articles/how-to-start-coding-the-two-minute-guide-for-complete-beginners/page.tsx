@@ -31,6 +31,17 @@ const Article = () => {
           />
         </picture>
       }
+      // featuredImage={
+      //   <Image
+      //     src="/screen-with-coffee.webp"
+      //     alt="Article Image"
+      //     width={800}
+      //     height={502}
+      //     className="w-full object-cover rounded-md"
+      //     priority
+      //     loading="eager"
+      //   />
+      // }
       sections={articleSections as ArticleSection[]}
       upNextArticleTitle="The Ultimate Guide to Becoming a Software Engineer, from scratch."
       upNextArticleImagePath="/code-doorway.png"
