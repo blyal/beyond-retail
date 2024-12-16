@@ -55,7 +55,7 @@ export const articleSections = [
       },
       {
         type: "paragraph",
-        content: <>So for now, don’t worry about AI taking your job—read on.</>,
+        content: <>So don’t worry about AI taking your job—read on.</>,
       },
     ],
   },
