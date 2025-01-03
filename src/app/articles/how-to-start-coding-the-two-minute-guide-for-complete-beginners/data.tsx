@@ -314,10 +314,10 @@ export const articleSections = [
         type: "paragraph",
         content: (
           <>
-            Register with a coding school, bootcamp, or university. Or else find
-            companies who will let you in the door to get unpaid (or paid!) work
-            experience. On the job is where the real learning happens. Start
-            building that resume, collecting references, and laying the
+            Register with a coding school, bootcamp, or university. Otherwise,
+            find companies who will let you in the door to get unpaid (or paid!)
+            work experience. On the job is where the real learning happens.
+            Start building that resume, collecting references, and laying the
             foundations for your career in IT.
           </>
         ),
