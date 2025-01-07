@@ -362,13 +362,14 @@ export const articleSections = [
         type: "unordered-list",
         content: [
           <>
-            They offer the same thing as YouTube, but are dedicated platforms,
-            with top-of-the-line tutorials. Coding along and thereby building a
-            couple of small projects will be a big step forward. Those projects
-            can later be shown in job interviews, and are concrete proof that
-            you can make something—including to yourself. …which should not be
-            taken lightly. For many of us, those early days of trying to get
-            your skills off the ground can be confusing and frustrating.
+            These services offer the same thing as YouTube, but are dedicated
+            platforms, with top-of-the-line tutorials. Coding along and thereby
+            building a couple of small projects will be a big step forward.
+            Those projects can later be shown in job interviews, and are
+            concrete proof that you can make something—including to yourself.
+            …which should not be taken lightly. For many of us, those early days
+            of trying to get your skills off the ground can be confusing and
+            frustrating.
           </>,
           <>
             Don’t worry if things still seem intimidating at this point—you’re
