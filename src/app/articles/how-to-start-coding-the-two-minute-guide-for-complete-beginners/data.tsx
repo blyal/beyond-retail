@@ -121,7 +121,7 @@ export const articleSections = [
               <span className="hover:underline text-cyan-400">Codecademy</span>
             </a>{" "}
             is a good option there. It&apos;s a learning platform which teaches
-            people to write code in a guided way.
+            people to write code in a highly guided manner.
           </>
         ),
       },
@@ -169,7 +169,7 @@ export const articleSections = [
             <strong className="font-bold">Then go back to YouTube</strong> and
             find a guided coding tutorial, so you can follow along and make a
             small app. This will be quite a step forward, as you will be
-            creating and running software yourself, which may feel quite
+            creating and running software yourself, which can feel quite
             satisfying.
           </>
         ),
@@ -294,8 +294,8 @@ export const articleSections = [
         type: "header",
         content: (
           <>
-            Moving on: as soon as you are able to, join a learning institution
-            or company, preferably in-person.
+            Moving on: as soon as you are able, join a learning institution or
+            company—if possible, in-person.
           </>
         ),
       },
