@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const articleSections = [
   {
     sectionBlocks: [
@@ -243,13 +245,13 @@ export const articleSections = [
             {" "}
             Once you’re ready to start programming yourself, I would consider
             starting with a service like{" "}
-            <a
+            <Link
               href="https://www.codecademy.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className="hover:underline text-cyan-400">Codecademy</span>
-            </a>
+            </Link>
             .
           </>
         ),
@@ -289,7 +291,7 @@ export const articleSections = [
         type: "unordered-list",
         content: [
           <>
-            <a
+            <Link
               href="https://www.youtube.com/@TraversyMedia"
               target="_blank"
               rel="noopener noreferrer"
@@ -297,9 +299,9 @@ export const articleSections = [
               <span className="text-cyan-400 hover:underline">
                 Traversy Media
               </span>
-            </a>{" "}
+            </Link>{" "}
             and{" "}
-            <a
+            <Link
               href="https://www.youtube.com/@programmingwithmosh"
               target="_blank"
               rel="noopener noreferrer"
@@ -307,7 +309,7 @@ export const articleSections = [
               <span className="text-cyan-400 hover:underline">
                 Programming with Mosh
               </span>
-            </a>{" "}
+            </Link>{" "}
             are some well-known channels which produce such videos.
           </>,
           <>
@@ -318,13 +320,13 @@ export const articleSections = [
           </>,
           <>
             You’ll also want to create a{" "}
-            <a
+            <Link
               href="https://github.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className="text-cyan-400 hover:underline">GitHub</span>
-            </a>{" "}
+            </Link>{" "}
             account—kind of like the Instagram or Pinterest for developers, but
             instead of photos, people post their code (and also save their code
             history—so it has a practical purpose as well). Trust me, a GitHub
@@ -339,21 +341,21 @@ export const articleSections = [
           <>
             After doing tutorials on YouTube for a while, I recommend to get a
             paid subscription to{" "}
-            <a
+            <Link
               href="https://www.pluralsight.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className="hover:underline text-cyan-400">PluralSight</span>
-            </a>{" "}
+            </Link>{" "}
             (or, alternatively,{" "}
-            <a
+            <Link
               href="https://www.udemy.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className="hover:underline text-cyan-400">Udemy</span>
-            </a>
+            </Link>
             ).
           </>
         ),

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { IoChevronForward, IoArrowForward } from "react-icons/io5";
 
 interface ArticlePageProps {
-  category: "Guides & Tutorials";
+  category: "Guides & Tutorials" | "Tech Trends";
   title: string;
   subtitle: string;
   dateTime: string; // Should be ISO 8601 format (e.g., "2024-11-21")

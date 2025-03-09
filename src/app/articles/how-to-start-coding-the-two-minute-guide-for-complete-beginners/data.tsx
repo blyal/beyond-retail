@@ -10,7 +10,11 @@ export const articleSections = [
             This article is about where and how to learn to code. If you’d like
             a more comprehensive guide to launching your career in software, you
             can check out my previous article{" "}
-            <Link href="/articles/the-ultimate-guide-to-becoming-a-software-engineer-from-scratch">
+            <Link
+              href="/articles/the-ultimate-guide-to-becoming-a-software-engineer-from-scratch"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="text-cyan-400 hover:underline">
                 The Ultimate Guide to Becoming a Software Developer, from
                 scratch.
@@ -113,13 +117,13 @@ export const articleSections = [
         content: (
           <>
             You need to get a feel of what coding is actually like.{" "}
-            <a
+            <Link
               href="https://www.codecademy.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className="hover:underline text-cyan-400">Codecademy</span>
-            </a>{" "}
+            </Link>{" "}
             is a good option there. It&apos;s a learning platform which teaches
             people to write code in a highly guided manner.
           </>
@@ -149,7 +153,7 @@ export const articleSections = [
           <>
             <strong className="font-bold">Download an IDE</strong>—a platform
             where developers write code.{" "}
-            <a
+            <Link
               href="https://code.visualstudio.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -157,7 +161,7 @@ export const articleSections = [
               <span className="text-cyan-400 hover:underline">
                 Visual Studio Code
               </span>
-            </a>{" "}
+            </Link>{" "}
             is a free and widely-used option.
           </>
         ),
@@ -186,7 +190,7 @@ export const articleSections = [
         type: "unordered-list",
         content: [
           <>
-            <a
+            <Link
               href="https://www.youtube.com/@TraversyMedia"
               target="_blank"
               rel="noopener noreferrer"
@@ -194,10 +198,10 @@ export const articleSections = [
               <em className="font-extralight text-cyan-400 hover:underline">
                 Traversy Media
               </em>
-            </a>
+            </Link>
           </>,
           <>
-            <a
+            <Link
               href="https://www.youtube.com/@programmingwithmosh"
               target="_blank"
               rel="noopener noreferrer"
@@ -205,7 +209,7 @@ export const articleSections = [
               <em className="font-extralight text-cyan-400 hover:underline">
                 Programming with Mosh
               </em>
-            </a>
+            </Link>
           </>,
         ],
       },
@@ -223,21 +227,21 @@ export const articleSections = [
           <>
             YouTube only has so many quality coding tutorials. To progress on
             from the beginner stuff, I recommend checking out either{" "}
-            <a
+            <Link
               href="https://www.pluralsight.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className="hover:underline text-cyan-400">PluralSight</span>
-            </a>{" "}
+            </Link>{" "}
             or{" "}
-            <a
+            <Link
               href="https://www.udemy.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className="hover:underline text-cyan-400">Udemy</span>
-            </a>
+            </Link>
             . They each have scores of high quality guided coding tutorials,
             made by talented and experienced developers, and covering many areas
             of software development.
@@ -265,15 +269,15 @@ export const articleSections = [
           <em>
             n.b. There are many fine places that teach coding online besides the
             resources I’ve mentioned, other video platforms and much more (
-            <a
+            <Link
               href="https://www.coursera.org/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className="hover:underline text-cyan-400">Coursera</span>
-            </a>
+            </Link>
             ,{" "}
-            <a
+            <Link
               href="https://frontendmasters.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -281,7 +285,7 @@ export const articleSections = [
               <span className="hover:underline text-cyan-400">
                 Frontend Masters
               </span>
-            </a>
+            </Link>
             , etc.).
           </em>
         ),

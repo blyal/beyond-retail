@@ -18,28 +18,28 @@ export default function ArticlesHub() {
         <div className="lg:bg-gray-900 mb-8 flex lg:block">
           <div className="lg:hidden pr-4 text-xl opacity-75">1</div>
           <Link
-            href="/articles/the-ultimate-guide-to-becoming-a-software-engineer-from-scratch"
+            href="/articles/the-new-normal-ai-in-software-development"
             passHref
           >
             <div className="cursor-pointer lg:h-80 flex flex-col lg:flex-col-reverse lg:grid lg:grid-cols-3">
               <div className="col-span-1 lg:p-9 flex flex-col gap-3 lg:gap-9">
                 <p className="text-sm opacity-60 hidden lg:block">
-                  Guides & Tutorials
+                  Tech Trends
                 </p>
                 <h2 className="text-lg lg:text-3xl line-clamp-3">
-                  The Ultimate Guide to Becoming a Software Engineer, from
-                  scratch.
+                  The New Normal: AI in Software Development
                 </h2>
+                <br className="hidden lg:block" />
                 <p className="opacity-60 text-xs lg:text-base">
-                  Alex Blyth | Nov 30, 2024
+                  Alex Blyth | March 10, 2025
                 </p>
               </div>
               <div className="w-full h-32 lg:h-80 col-span-2 mt-3 lg:m-0">
                 <picture>
-                  <source srcSet="/code-doorway.webp" type="image/webp" />
+                  <source srcSet="/ai-person-cropped.webp" type="image/webp" />
                   <img
-                    src="/code-doorway.png"
-                    alt="Featured Article Image"
+                    src="/ai-person-cropped.jpg"
+                    alt="A young man made out of code, staring into the distance"
                     className=" mx-auto w-full h-full object-cover rounded-md lg:rounded-none"
                   />
                 </picture>{" "}
@@ -92,6 +92,42 @@ export default function ArticlesHub() {
                   </h3>
                   <p className="text-xs lg:text-sm text-gray-500 mb-2">
                     Dec 12, 2024
+                  </p>
+                </div>
+              </div>
+            </Link>{" "}
+          </div>
+          <div className="flex lg:block lg:bg-gray-900 ">
+            <div className="lg:hidden pr-4 text-xl opacity-75">3</div>
+            <Link
+              href="/articles/the-ultimate-guide-to-becoming-a-software-engineer-from-scratch"
+              passHref
+            >
+              <div className="shadow-md overflow-hidden cursor-pointer">
+                {/* <Image
+                src="/code-doorway.png"
+                alt="Article 1"
+                width={400}
+                height={200}
+                className="w-full h-48 object-cover"
+              /> */}
+                <div className="w-full h-28 hidden lg:block">
+                  <picture>
+                    <source srcSet="/code-doorway.webp" type="image/webp" />
+                    <img
+                      src="/code-doorway.png"
+                      alt="Featured Article Image"
+                      className="w-full h-full object-cover"
+                    />
+                  </picture>
+                </div>
+                <div className="lg:px-6 lg:py-7 flex flex-col gap-2 lg:gap-4">
+                  <h3 className=" text-lg lg:text-xl line-clamp-3">
+                    The Ultimate Guide to Becoming a Software Engineer, from
+                    scratch.
+                  </h3>
+                  <p className="text-xs lg:text-sm text-gray-500 mb-2">
+                    Nov 30, 2024
                   </p>
                 </div>
               </div>
